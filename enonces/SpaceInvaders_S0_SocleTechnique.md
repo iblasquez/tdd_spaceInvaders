@@ -51,6 +51,7 @@ Votre projet **`spaceinvaders`** est maintenant prêt pour le suite du mini-proj
 
 Remarques :   
 - Pour avoir plus de détail sur la mise en place de git sur un projet Eclipse, vous pouvez en vous aider du [Tutoriel de découverte de Git (au travers d'EGit)](https://github.com/iblasquez/tuto_git/blob/master/egit/git_egit_tutoriel.md) et/ou du [mémo associé](https://github.com/iblasquez/tuto_git/blob/master/egit/git_egit_memo.md).  
+- Pour personnaliser vos messages de commit avec des emojis, vous pouvez vous jeter un petit coup d'oeil à ce guide : [An emoji guide for your commit messages](https://gitmoji.carloscuesta.me/)
 
 ### 2. Le workflow le plus simple pour commencer
 Un des buts de ce mini-projet est de vous permettre de prendre la *bonne* habitude de versionner votre code.
