@@ -49,7 +49,8 @@ Pour cela, vous devez suivre les étapes suivantes :
 Votre projet **`spaceinvaders`** est maintenant prêt pour le suite du mini-projet !
 
 
-Remarque : Pour avoir plus de détail sur la mise en place de git sur un projet Eclipse, vous pouvez en vous aider du [Tutoriel de découverte de Git (au travers d'EGit)](https://github.com/iblasquez/tuto_git/blob/master/egit/git_egit_tutoriel.md) et/ou du [mémo associé](https://github.com/iblasquez/tuto_git/blob/master/egit/git_egit_memo.md).
+Remarques :   
+- Pour avoir plus de détail sur la mise en place de git sur un projet Eclipse, vous pouvez en vous aider du [Tutoriel de découverte de Git (au travers d'EGit)](https://github.com/iblasquez/tuto_git/blob/master/egit/git_egit_tutoriel.md) et/ou du [mémo associé](https://github.com/iblasquez/tuto_git/blob/master/egit/git_egit_memo.md).  
 
 ### 2. Le workflow le plus simple pour commencer
 Un des buts de ce mini-projet est de vous permettre de prendre la *bonne* habitude de versionner votre code.

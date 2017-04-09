@@ -98,10 +98,10 @@ Les références sont disponibles [ici](SpaceInvaders_Refrences.md)
 
 
 ## Commentaires, remarques et suggestions
-Pour les discussions, c'est par là : https://github.com/iblasquez/nomDepot/files/issues  
-Pour les propositions de contenu, de modification par ici : https://github.com/iblasquez/nomDepot/files/pulls 
+Pour les discussions, c'est par là : https://github.com/iblasquez/tdd_spaceInvaders/issues  
+Pour les propositions de contenu, de modification par ici : https://github.com/iblasquez/tdd_spaceInvaders/pulls
 
-Et bien sûr, n'hésitez pas à personnaliser vos messages avec des [emojis](http://www.webpagefx.com/tools/emoji-cheat-sheet/) :simple_smile:
+Et bien sûr, n'hésitez pas à personnaliser vos messages avec des [emojis](http://www.webpagefx.com/tools/emoji-cheat-sheet/) :smile:
 
 
 ## Licence
