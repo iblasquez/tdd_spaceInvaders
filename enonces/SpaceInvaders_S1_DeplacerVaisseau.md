@@ -59,7 +59,7 @@ Pour vérifier qu'un espace de jeu en 2D est bien créé et qu'il est vide, un t
 	
 	   @Test
 	   public void test_AuDebut_JeuSpaceInvaderEstVide() {
-		    SpaceInvaders spaceInvaders = new SpaceInvaders(15, 10);
+		    SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
 		    assertEquals("" + 
 		    "...............\n" + 
 		    "...............\n" +
@@ -93,7 +93,7 @@ Ce test doit échouer, puisqu'en l'état actuel du projet, il n'est pas compilab
 
 Dans un premier temps, nous allons donc rendre ce code compilable en corrigeant les deux erreurs de compilation soulevées par l'IDE :
 
-* **Créer la classe `SpaceInvaders`** dans le package `fr.unilim.iut.spaceinvaders` de **`src\main\java`** (par exeemple en vous aidant de l'IDE et en cliquant sur l'erreur de compilation).
+* **Créer la classe `SpaceInvaders`** dans le package `fr.unilim.iut.spaceinvaders` de **`src\main\java`** (par exemple en vous aidant de l'IDE et en cliquant sur l'erreur de compilation. Veillez bien à créer la classe dans **`main`** et non dans **`test`**).
 
 
 * **Créer un constructeur à 2 paramètres dans la classe `SpaceInvaders`** qui va permettre de personnaliser les dimensions du jeu (longueur et hauteur). Cette étape implique de déclarer deux attributs dans la classe **`SpaceInvaders`** nommés *`longueur`* et *`hauteur`* pour bien montrer l'intention du code et le rendre explicite.
@@ -139,7 +139,7 @@ Normal, puisque la méthode `toString` n'a pas encore été implémentée. C'est
 ````
 
 Exécuter le test.   
-Que constatez-vous ? ... Le test passe, la barre est VERTS !  
+Que constatez-vous ? ... Le test passe, la barre est AU VERT !  
 
 Rappel : `toString` étant une méthode de la classe `Object`, l'annotation `@Override` indique que, dans `SpaceInvaders`, cette méthode est une méthode redéfinie.
 
@@ -153,9 +153,9 @@ Vient ensuite la troisième (et dernière étape) de l'itération qui est une é
 
 Une étape de refactoring doit toujours être effectuée sur *barre verte* (c-a-d quand tous les tests passent) pour garantir le comportement du système. L'étape de refactoring va permettre d'améliorer la qualité du code, elle pourra avoir, entre autres, un impact sur :
 
-- **la conception** : en encourageant le découpage et découplage des classes pour tendre vers une [conception simple](http://referentiel.institut-agile.fr/yagni.html) qui respectera au mieux [les critères de simplicité](http://referentiel.institut-agile.fr/simplicite.html).
+- **la conception** : en encourageant le découpage et le découplage des classes pour tendre vers une [conception simple](http://referentiel.institut-agile.fr/yagni.html) qui respectera au mieux [les critères de simplicité](http://referentiel.institut-agile.fr/simplicite.html).
 	
-- **la lisibilité du code** : Les noms que vous utilisez doivent être explicites pour révéler l'intention de votre code (son but). ***Bien nommer*** (variables, méthodes, classes, packages, ...) est d'ailleurs l'une des premières *bonnes* pratiques de conception à respecter pour favoriser la lisibilité du code. Et ce n'est pas par hasard si [Robert C. Martin](https://twitter.com/unclebobmartin) a fait de *Meaningful Names* le premier chapitre de son livren[Clean Code](www.amazon.fr/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) et que Martin Fowler aime à rappeller dans [Refactoring, Improving the Design of Existing Code](http://martinfowler.com/books/refactoring.html) la citation suivante : 
+- **la lisibilité du code** : les noms que vous utilisez doivent être explicites pour révéler l'intention de votre code (son but). ***Bien nommer*** (variables, méthodes, classes, packages, ...) est d'ailleurs l'une des premières *bonnes* pratiques de conception à respecter pour favoriser la lisibilité du code. Et ce n'est pas par hasard si [Robert C. Martin](https://twitter.com/unclebobmartin) a fait de *Meaningful Names* le premier chapitre de son livren[Clean Code](www.amazon.fr/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) et que Martin Fowler aime à rappeller dans [Refactoring, Improving the Design of Existing Code](http://martinfowler.com/books/refactoring.html) la citation suivante : 
 > **Any fool can write code that a computer can understand. Good programmers write code that humans can understand.**
 
 - **l'optimisation des performances du programme:** lorsque cela s'avère vraiment nécessaire.
@@ -211,13 +211,16 @@ Comme le dit Martin Fowler :
 
 
 **Une fois, le refactoring terminé et les tests relancés AU VERT, vous pouvez vous lancer dans une nouvelle itération.    
-Chaque itération commence par un test qui échoue c-a-d qu'un test ne devra être écrit uniquement s'il apporte un nouveau comportement au système. En fin d'itération, la question à se poser est donc *Quel est le test suivant?***
+Chaque itération commence par un test qui échoue c-a-d qu'un test devra être écrit uniquement s'il apporte un nouveau comportement au système. En fin d'itération, la question à se poser est donc *Quel est le test suivant?***
 
 Nous considérons que pour cette première fonctionnalité le test écrit précédemment permet de *bien* vérifier la fonctionnalité et que cette fonctionnalité est désormais *terminée*.  
 Nous passons donc maintenant à la deuxième fonctionnalité de notre backlog à savoir : **positionner un nouveau vaisseau dans l'espace de jeu** et le prochain test à écrire sera donc en lien avec cette nouvelle fonctionnalité. 
 
 
-***Remarque : Votre fonctionnalité étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version !***
+***Remarque : Votre fonctionnalité étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version*** :  
+- avec un message de commit qui reprend le but de la fonctionnalité, par exemple ***créer un espace de jeu***    
+- en prenant bien soin AVANT de cliquer sur le bouton **`Commit`** de cocher le `Status` des fichiers **`SpaceInvaders.java`** et **`SpaceInvadersTest.java`** (et uniquement ces deux fichiers) afin de les ajouter à l'**Index** et donc de les intégrer au commit !  
+Vérifiez une fois le commit effectué que ces deux fichiers sont bien précédés d'une icône en forme de **cylindre orange**, c-a-d qu'ils sont désormais bien soumis au contrôle du gestionnaire de version.  
 
 ## Fonctionnalité n°2 : Positionner un nouveau vaisseau dans l'espace de jeu <a id="positionnerVaisseau"></a>
 
@@ -234,9 +237,10 @@ A cette liste de critères d'acceptance peut venir s'ajouter une liste de contra
 * On considère que le coin supérieur gauche de l'espace jeu (point en haut à gauche) a pour coordonnées (0,0)
 * On considère que la taille du vaisseau est réduite pour l'instant à son minimum (1 seul point) c-a-d que pour le moment le vaisseau n'a pas de vraiment de dimension. Nous posons cette hypothèse en vertu du principe **YAGNI** (**Y**ou **A**ren't **G**onna **N**eed **I**t), une *bonne pratique* issue de l'[e**X**treme **P**rogramming](https://fr.wikipedia.org/wiki/Extreme_programming).
 
-> **[YAGNI (anglicisme, acronyme anglais de you ain't gonna need it, qui peut se traduire par " vous n'en aurez pas besoin ") est un principe d'extreme programming qui déclare que les programmeurs ne devraient pas ajouter de fonctionnalité à un logiciel tant que celle-ci n'est pas absolument nécessaire. Ron Jeffries recommande par ailleurs : "mettez toujours en œuvre les choses quand vous en avez effectivement besoin, pas lorsque vous prévoyez simplement que vous en aurez besoin"]((https://fr.wikipedia.org/wiki/YAGNI))** *(Extrait wikipédia)*
+> **[YAGNI (anglicisme, acronyme anglais de You Ain't Gonna Need It, qui peut se traduire par "vous n'en aurez pas besoin") est un principe d'extreme programming qui déclare que les programmeurs ne devraient pas ajouter de fonctionnalité à un logiciel tant que celle-ci n'est pas absolument nécessaire. Ron Jeffries recommande par ailleurs : "mettez toujours en œuvre les choses quand vous en avez effectivement besoin, pas lorsque vous prévoyez simplement que vous en aurez besoin"]((https://fr.wikipedia.org/wiki/YAGNI))** *(Extrait wikipédia)*
 
-Le principe YAGNI incite donc le développeur à commencer son implémentation par quelque chose de simple qui marche... Si, plus tard, il juge qu'il est nécessaire de donner une dimension au vaisseau, il la lui donnera. Mais pour l'instant cela n'est pas nécessaire : contentons-nous juste de positionner simplement le vaisseau et n'essayons pas d'en faire plus pour le moment :simple_smile:
+Le principe YAGNI incite donc le développeur à commencer son implémentation par quelque chose de simple qui marche...  
+Si, plus tard, il juge qu'il est nécessaire de donner une dimension au vaisseau, il la lui donnera. Mais pour l'instant cela n'est pas utile : contentons-nous juste de positionner simplement le vaisseau et n'essayons pas d'en faire plus pour le moment :smile:
 
 
 ### Test : Le nouveau vaisseau est *bien* placé à la position souhaitée
@@ -253,7 +257,7 @@ Arbitrairement, nous choisissons d'écrire notre test à l'aide des données sui
 - un nouveau vaisseau à positionner aux coordonnées x=8 et y=9 de l'espace de jeu.  
 - le caractère `V` pour marquer la présence d'un vaisseau dans l'espace de jeu lorsque celui-ci est affiché sous forme de chaine de caractères ASCII. 
 
-Implémenter le test suivant dans la classe `SpaceInvadersTest``:
+Implémenter le test suivant dans la classe `SpaceInvadersTest`:
 
 ```JAVA
 
@@ -277,8 +281,7 @@ Implémenter le test suivant dans la classe `SpaceInvadersTest``:
 
 
 **Remarque sur l'écriture d'un test :**  
-Pour formater et structurer au mieux un test, le [pattern ***AAA***](http://c2.com/cgi/wiki?ArrangeActAssert) (***A***rrange ***A***ct ***A***ssert) est préconisé pour l'écriture d'un test.  
-Ce patron décompose le test en trois étapes distinctes :
+Pour formater et structurer au mieux un test, le [pattern ***AAA***](http://c2.com/cgi/wiki?ArrangeActAssert) (**A**rrange **A**ct **A**ssert) est préconisé pour l'écriture d'un test. Ce patron décompose le test en trois étapes distinctes :
  
 * **A**rrange : l'**initialisation** de l'acteur sous test c-a-d l'initialisation des objets nécessaires à l'exécution de la méthode à tester.  
 Dans notre test : `SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);`
@@ -376,7 +379,7 @@ Actuellement la méthode `toString` se présente de la manière suivante :
 ```
 
 Nous souhaitons qu'un caractère `V` soit affiché  à une position donnée si le vaisseau est censé occuper cette position, sinon le `.` continuera à être affiché en guise de position vide.  
-Pour exprimer cette intention dans le code,on va remplacer l'instruction  `espaceDeJeu.append('.');` par la condition suivante :
+Pour exprimer cette intention dans le code, nous allons remplacer l'instruction  `espaceDeJeu.append('.');` par la condition suivante :
 
 ```JAVA
 
@@ -386,7 +389,11 @@ Pour exprimer cette intention dans le code,on va remplacer l'instruction  `espac
 		espaceDeJeu.append('.');
 ```
 
-Pour que ce code compile, il est nécessaire de créer (automatiquement via l'IDE) la méthode `occupeLaPosition` dans la classe `Vaisseau`et de l'implémenter de la manière suivante par exemple :
+Pour que ce code compile, il est nécessaire :
+
+* de renommer `i` en `y` (**`ALT+SHIFT+R`**)  
+* de renommer `j` en `x` (**`ALT+SHIFT+R`**)  
+* puis de créer (automatiquement via l'IDE) la méthode `occupeLaPosition` dans la classe `Vaisseau`et de l'implémenter de la manière suivante par exemple :
 
 ```JAVA
 
@@ -395,11 +402,9 @@ Pour que ce code compile, il est nécessaire de créer (automatiquement via l'ID
 	}
 ```
 
-Remarque : Si vous avez créé votre méthode automatiquement via l'IDE, vous aurez bien noté que les `i` et `j` générés par l'IDE ont été renommés en `y ` et `x`.  
-
-
 Que se passe-t-il si on relance les tests ? ...
-Le premier test ne passe plus en raison d'une `NullPointerException`, ce qui est normal puisqu'aucun vaisseau n'a été instancié lors de ce premier test, il faut donc corriger le code de la méthode `toString` afin d'éviter cette `NullPointerException`, ce qui nous amène au code suivant :
+Le premier test ne passe plus en raison d'une `NullPointerException`, ce qui est normal puisqu'aucun vaisseau n'a été instancié lors de ce premier test.  
+Il faut donc corriger le code de la méthode `toString` afin d'éviter cette `NullPointerException`, ce qui nous amène à ajouter un test de type `vaisseau!=null`, pour arriver au code suivant :
 
 
 ```JAVA  
@@ -425,17 +430,18 @@ Il est donc temps de s'intéresser à une évenutelle étape de refactoring.
 
 #### Etape REFACTOR : améliorer la qualité du code 
 
-En regardant de plus près le code que nous venons d'écrire, il semblerait que la qualité de code de la méthode `toString` pourrait être améliorée aussi bien en terme de lisiblité que de reponsabilité : l'étape de refactoring va donc aller dans ce sens.
+En regardant de plus près le code que nous venons d'écrire, il semblerait que la qualité de code de la méthode `toString` puisse être améliorée aussi bien en terme de lisiblité que de reponsabilité : l'étape de refactoring va donc aller dans ce sens.
 
 ##### 1 Améliorer la lisibilité en décomposant les méthodes (*Extract Method*)
 
 ###### 1.1 L'espace jeu a un vaisseau
 
-L'**Extract Method** est un des patterns les plus utilisés dans les phases de refactoring.
-Il permet d'améliorer la lisibilité du code, de réduire la duplication en isolant une partie du code.
-
-Par exemple, dans la méthode `toString`, l'instruction `vaisseau!=null` ne pourrait-elle pas être un peu plus expressive ? En effet, cette instruction permet de savoir s'il existe actuellement un objet de type vaisseau dans l'espace de jeu c-a-d si l'espace de jeu `aUnVaisseau`.  
+Dans la méthode `toString`, l'instruction `vaisseau!=null` ne pourrait-elle pas être un peu plus expressive ? En effet, cette instruction permet de savoir s'il existe actuellement un objet de type vaisseau dans l'espace de jeu c-a-d si l'espace de jeu `aUnVaisseau`.
+  
 L'**Extract Method** va nous permettre de remplacer rapidement l'instruction `vaisseau!=null` par un appel à la méthode `this.aUnVaisseau()`.  
+
+L'**Extract Method** est un des patterns les plus utilisés dans les phases de refactoring.
+Il permet d'améliorer la lisibilité du code, de réduire la duplication en isolant une partie du code.  
 
 Pour mettre en place un **Extract Method** sous Eclipse, vous devez procéder de la manière suivante
 
@@ -445,14 +451,14 @@ Pour mettre en place un **Extract Method** sous Eclipse, vous devez procéder de
 	* soit directement à l'aide du raccourci  clavier (**`ALT+SHIFT+M`**)
 * **paramétrer votre Extract Method** en renseignant le nom de la méthode : `aUnVaisseau` et cliquer sur OK.
 
-Une méthode privée `aUnVaisseau` est alors automatiquement généré avec le bout de code sélectionné qui est lui-même automatiquement remplacé dans la méthode `toString` par un appel à la méthode `aUnVaisseau`.
+Une méthode privée `aUnVaisseau` est alors automatiquement générée avec le bout de code sélectionné qui est lui-même automatiquement remplacé dans la méthode `toString` par un appel à la méthode `aUnVaisseau`.
 
 Pour une meilleure lisibilité, rajouter `this` devant l'appel à `aUnVaisseau` de manière à obtenir : `if (this.aUnVaisseau() && vaisseau.occupeLaPosition(x, y))`
  
 > **Vous venez de faire des modifications dans votre code...**  
 > ***N'oubliez pas de relancer les tests pour vérifier que le comportement de votre code n'a pas changé !***
 
-Si les tests sont au VERT (et c'est certainement le cas puisqu'on a effectué ce refactoring de manière sûre à partir de l'IDE), vous pouvez continuer...
+Si les tests sont au VERT (et c'est certainement le cas puisque nous avons effectué ce refactoring de manière sûre à partir de l'IDE), vous pouvez continuer...
 
 
 ###### 1.2 L'espace jeu a un vaisseau à une position donnée
@@ -481,14 +487,14 @@ Nous allons maintenant nous intéresser au bout de code suivant et le refactorer
 
     if (this.aUnVaisseauQuiOccupeLaPosition(x, y))
         espaceDeJeu.append('V');
-	else
+    else
 	    espaceDeJeu.append('.');
 ```
 
 
 Dans ce bout de code, nous voyons clairement apparaître une **opération d'écriture** qui consiste à concaténer un caractère ASCII à une chaine existante. Cette action est réalisée grâce à la méthode native `append` du `StringBuilder`. Le caractère ASCII concaténé n'est autre que la **`marque`** qui correspond à l'objet qui occupe (ou pas) la position en cours de traitement.
 
-En amont de cette opération d'écriture et pour factoriser et découpler un peu ce bout de code, il pourrait être intéressant de mettre en place une **opération de lecture** qui viserait à récuperer en fonction de l'état de l'espace jeu, la marque attendue pour une position donnée.
+En amont de cette opération d'écriture et pour factoriser et découpler ce bout de code, il pourrait être intéressant de mettre en place une **opération de lecture** qui viserait à récuperer en fonction de l'état de l'espace jeu, la marque attendue pour une position donnée.
 
 Dans un premier temps, nous allons donc refactorer un peu ce code pour isoler l'opération d'écriture de l'opération de lecture.
 Pour cela, nous allons ajouter une variable `marque` et supprimer la duplication autour de l'écriture en la simplifiant par un simple appel à `espaceDeJeu.append(marque)`.
@@ -497,17 +503,17 @@ Modifiez votre code précédent de la sorte :
 
 ```JAVA  
 
-     char marque;
-	  if (this.aUnVaisseauQuiOccupeLaPosition(x, y))
+    char marque;
+    if (this.aUnVaisseauQuiOccupeLaPosition(x, y))
 	      marque='V';
-	  else
+    else
 	      marque='.';
 	
-      espaceDeJeu.append(marque);
+    espaceDeJeu.append(marque);
 ```
 
 > **Vous venez de faire des modifications dans votre code...**  
-> ***N'oubliez pas de relancer les tests pour vérifier que le comportement de votre code n'a pas changé !**
+> ***N'oubliez pas de relancer les tests pour vérifier que le comportement de votre code n'a pas changé !***
 
 En ce qui concerne l'**opération d'écriture**, nous conserverons pour le moment l'appel à la méthode native **`append`** du `StringBuilder` et nous ne toucherons donc pas à ce code.
 
@@ -522,7 +528,7 @@ Le code dans le double `for` devient alors :
 ```JAVA
    
     char marque = recupererMarqueDeLaPosition(x, y);
-	espaceDeJeu.append(marque);
+    espaceDeJeu.append(marque);
 
 ````
 
@@ -556,7 +562,8 @@ Votre méthode `toString` devrait donc maintenant ressembler à :
 > ***N'oubliez pas de relancer les tests pour vérifier que le comportement de votre code n'a pas changé !***
 
 
-Tiens et si on regardait maintenant s'il était possible de refactorer autre chose dans la nouvelle méthode que nous venons de générer `recupererMarqueDeLaPosition`.
+Tiens et si nous nous intéressions maintenant à la méthode fraichement générée `recupererMarqueDeLaPosition`.  
+Est-il possible de refactorer quelque chose dans cette nouvelle méthode ?  
 
 ##### 3 Améliorer la qualité du code en éliminant les nombres magiques  (*code smells*)
 
@@ -565,34 +572,34 @@ Actuellement, la méthode `recupererMarqueDeLaPosition` se présente de la mani�
 ```JAVA  
  
     private char recupererMarqueDeLaPosition(int x, int y) {
-		char marque;
-		if (this.aUnVaisseauQuiOccupeLaPosition(x, y))
-			marque='V';
-		else
-			marque='.';
-		return marque;
+        char marque;
+        if (this.aUnVaisseauQuiOccupeLaPosition(x, y))
+           marque='V';
+        else
+           marque='.';
+        return marque;
 	}
 
 ```
 
 
-Mais quelle intention se cache derrière `V` et `.` ? Pourquoi ne pas avoir choisi `X` et pas `V` ?  D'où viennent `V` et `.` : ne seraient-ils pas apparus dans notre programme un peu par ***magie*** ?    
-Le terme de **Nombre Magique** (ou ***magic number***) est employé en informatique [pour désigner, entre autres, l'utilisation de constantes numériques non nommées dans le code source d'un programme.](https://fr.wikipedia.org/wiki/Nombre_magique_(programmation)). 
+Mais quelle intention se cache derrière `V` et `.` ? Pourquoi ne pas avoir choisi `X` au mieu de `V` ?  D'où viennent `V` et `.` : ne seraient-ils pas apparus dans notre programme un peu comme par ***magie*** ?    
+Le terme de **Nombre Magique** (ou ***magic number***) est employé en informatique [pour désigner, entre autres, l'utilisation de constantes numériques non nommées dans le code source d'un programme](https://fr.wikipedia.org/wiki/Nombre_magique_(programmation)). 
 
 `V` et `.` sont typiquement des **nombres magiques** que l'on va s'attacher à remplacer par des constantes symboliques en suivant le pattern de refactoring **Replace Magic Number with Symbolic Constant** décrit par exemple [ici](https://refactoring.com/catalog/replaceMagicNumberWithSymbolicConstant.html) sur le site [refactoring.com](https://refactoring.com/catalog/)
 
 Pour créer une constante symbolique à partir d'un nombre magique, il est bien sûr possible d'utiliser l'IDE.
 
-Commençons par la marque du vaisseau. Sélectionnez  **`V`** dans votre code, puis à partir du menu **`Refactor`**, sélectionnez **`Extract Constant`** et renseignez le nom de la constante de la manière suivante : `MARQUE_VAISSEAU`.  
+Commençons par la marque du vaisseau. Sélectionnez  **`'V'`** dans votre code, puis à partir du menu **`Refactor`**, sélectionnez **`Extract Constant`** et renseignez le nom de la constante de la manière suivante : `MARQUE_VAISSEAU`.  
 Cliquez sur `OK` et vérifiez que l'IDE vient bien de vous créer la constante symbolique suivante :  
 `private static final char MARQUE_VAISSEAU = 'V';`
 
 *Remarque :* Pour nommer la constante, nous avons utilisé la [convention java classique](http://www.oracle.com/technetwork/java/codeconventions-150003.pdf), à savoir utiliser des majuscules et  séparer les mots par des *underscore* (tiret bas).
 
-De la même manière, remplacez dans votre code, le nombre magique  `.` par une constante symbolique `MARQUE_VIDE`.
+De la même manière, remplacez dans votre code, le nombre magique  **`'.'`** par une constante symbolique `MARQUE_VIDE`.
 
 Voyez-vous dans votre code un autre nombre magique ?  
-Effectivement, on pourrait remplacer `\n` par une constante symbolique `MARQUE_FIN_LIGNE`.
+Effectivement, on pourrait remplacer **`'\n'`** par une constante symbolique `MARQUE_FIN_LIGNE`.
 
 > **Vous venez de faire des modifications dans votre code...**  
 > ***N'oubliez pas de relancer les tests pour vérifier que le comportement de votre code n'a pas changé !***
@@ -622,7 +629,7 @@ Personnellement, il y a encore quelques petits points que je souhaiterais améli
 > ***N'oubliez pas de relancer les tests pour vérifier que le comportement de votre code n'a pas changé !***
 
 
-* **Il est à  noter que le refactoring n'est pas limité au code de production et que le code de test peut également être amélioré lors des phases de refactoring**. Pour l'instant, nous n'avons que deux tests, donc pas vraiment de duplication. Par contre comme nous disponsons désormais d'une méthode `recupererEspaceJeuDansChaineASCII`, plus explicite que `toString`, nous pouvons renommer dans le fichier test `SpaceInvaders` les `toString` en `recupererEspaceJeuDansChaineASCII` (comme précédemment, comme on essaye de renommer `toString`, il faut faire ce renommage à la main dans les deux méthodes de test, l'IDE ne le permet pas).  
+* **Il est à  noter que le refactoring n'est pas limité au code de production et que le code de test peut également être amélioré lors des phases de refactoring**. Pour l'instant, nous n'avons que deux tests dans la classe `SpaceInvadersTest`, donc pas vraiment de duplication. Par contre comme nous disposons désormais d'une méthode `recupererEspaceJeuDansChaineASCII`, plus explicite que `toString`, nous pouvons renommer dans le fichier test `SpaceInvadersTest` les `toString` en `recupererEspaceJeuDansChaineASCII` (comme précédemment, comme on essaye de renommer `toString`, il faut faire ce renommage à la main dans les deux méthodes de test, l'IDE ne le permet pas).  
 Et bien sûr pour que le code compile, il faut rendre `public` la méthode `recupererEspaceJeuDansChaineASCII` car par défaut elle a été générée `private` par l'IDE.
 
 > **Vous venez de faire des modifications dans votre code...**  
@@ -635,12 +642,12 @@ Et voilà où le refactoring nous a mené...
 
 ![Diagramme de classes Sprint 1 Fonctionnalité 2 après recuperer dans chaine ASCCI](images/DiagClasses_S1_F2_2.png)
 
-Le diagramme de classes précédent illustre l'état de la conception de notre système à l'issue de cette itération (jetez un petit coup d'oeil sur votre fichier `.ucls` si vous utilisez Object Aid UML Explorer afin de vérifier que vous avez bien le même diagramme :simple_smile:)
+Le diagramme de classes précédent illustre l'état de la conception de notre système à l'issue de cette itération (jetez un petit coup d'oeil sur votre fichier `.ucls` si vous utilisez Object Aid UML Explorer afin de vérifier que vous avez bien le même diagramme :smile: )
 
-Nous pensons que le refactoring de cette itération est maintenant terminé : c'est subjectif.
+Nous estimons que le refactoring de cette itération est maintenant terminé : c'est subjectif.
  
 Rassurez-vous les phases de refactoring sont d'habitude moins longue et plus rapide et le but n'est pas de refactoré tout d'un coup, mais bien petit à petit pour faire émerger la conception.  
-C'est vous qui décidez ce que vous souhaitez refactorer : **avec les tests vous serez en confiance et vous aurez envie de jouer avec votre code pour en améliorer sa qualité ! **
+C'est vous qui décidez ce que vous souhaitez refactorer : **avec les tests vous serez en confiance et vous aurez envie de jouer avec votre code pour en améliorer sa qualité !**
 
 Nous avons consacré à cette itération une *longue* étape de refactoring afin de présenter les pistes de refactoring couramment explorées pour améliorer la qualité de code, à savoir :  
 - **travailler sur la lisibilité du code**       
@@ -651,14 +658,14 @@ Nous avons consacré à cette itération une *longue* étape de refactoring afin
 Dans vos prochains refactoring, il faudra aussi penser à **répartir au mieux les responsabilités** (en s'interrogeant notamment sur le [principe de responsabilité unique](https://fr.wikipedia.org/wiki/Principe_de_responsabilit%C3%A9_unique))     
 
 Les techniques refactoring que nous avons mises en oeuvre via l'IDE font partie des techniques de refactoring de base à connaître à savoir : **Rename**, **Extract Method**, **Inline**, **Magic Number**.  
-Vous pouvez retrouver des explications détaillés sur ces techniques de refactoring et sur bien d'autres dans les catalogue de refactoring en ligne **[refactoring.com](https://refactoring.com/catalog)** et **[sourcemaking.com](https://sourcemaking.com/refactoring/refactorings)**.
+Vous pouvez retrouver des explications détaillés sur ces techniques de refactoring et sur bien d'autres dans les catalogues de refactoring en ligne **[refactoring.com](https://refactoring.com/catalog)** et **[sourcemaking.com](https://sourcemaking.com/refactoring/refactorings)**.
 
 
 **Et après tout ça, on fait quoi ? ...**
 Bon c'est pas tout, mais une fois l'itération terminée, il faut passer à la suivante...
 ... en se posant la fameuse question **Quel est donc le prochain test  à écrire ?**
-Mais, au fait, en-a-t-on vraiment terminé avec les tests cette fonctionnalité ? A-t-on pensé à tout ?
-Ah non, on a oublié les cas limites ... Par exemple, celui où on essaierait de positionner un vaisseau en dehors de l'espace de jeu... Ce sera donc notre prochain test !!!
+Mais, au fait, en-a-t-on vraiment terminé avec les tests de cette fonctionnalité ? A-t-on pensé à tout ?
+Ah non, on n'a pas encore examiné les cas limites : comme par exemple, celui où on essaierait de positionner un vaisseau en dehors de l'espace de jeu... Ce sera donc notre prochain test !!!
 
 
 ### Test : Le nouveau vaisseau ne peut pas être positionné (trop à droite) en dehors de l'espace jeu 
@@ -669,7 +676,10 @@ Pour écrire le test, et notamment l'étape **A**ssert, il faut décider de ce q
 
 Il existe différentes solutions pour écrire des assertions sur les exceptions.
 Nous choisissons la solution suivante pour commencer qui semble bien adaptée à notre test.    
-Remarque: Pour en savoir plus sur d'autres façons d'écrire des assertions sur les exceptions, jetez un petit coup d'oeil [ici](https://jeanchristophegay.com/les-exceptions-dans-les-tests-unitaires/). 
+Remarque: Pour en savoir plus sur d'autres façons d'écrire des assertions sur les exceptions, jetez un petit coup d'oeil [ici](https://jeanchristophegay.com/les-exceptions-dans-les-tests-unitaires/).
+
+Ajouter le code suivant en tant que troisième test dans le fichier de test `SpaceInvadersTest.java` :  
+
 
 ```JAVA  
 
@@ -683,7 +693,7 @@ Remarque: Pour en savoir plus sur d'autres façons d'écrire des assertions sur 
 Remarque : Comme nous considérons que la position en haut à gauche de l'écran est `(0,0)` c-a-d 
 que les abscisses commencent à *0*, la première abscisse qui sortira de l'écran de jeu aura donc comme valeur la longueur de l'écran c-a-d la valeur de `15` d'après l'instruction précédente.
 
-Pour faire compiler ce code, il faut crééer la classe `HorsEspaceJeuException` de la manière suivante par exemple : 
+Pour faire compiler ce code, il faut créer la classe `HorsEspaceJeuException` de la manière suivante par exemple : 
 
 ```JAVA  
 
@@ -694,13 +704,13 @@ Pour faire compiler ce code, il faut crééer la classe `HorsEspaceJeuException`
 		    super(message);
 	    }
 
-}
+    }
 ```
 
-Remarque : Nous avons choici une `RuntimeException` qui caractérise une exception levée pour des erreurs de programmation qui peuvent survenir à de nombreux endroits dans le code (à l'image du `NullPointerException`). Vous pouvez choisir une `Exception` mais dans ce cas là, il ne faudra pas oublier de l'attraper ou de la déclarer dans la signaure de la méthode où elle est lancée...
+Remarque : Nous avons choisi une `RuntimeException` qui caractérise une exception levée pour des erreurs de programmation qui peuvent survenir à de nombreux endroits dans le code (à l'image du `NullPointerException`). Vous pouvez choisir une `Exception` mais dans ce cas là, il ne faudra pas oublier de l'attraper ou de la déclarer dans la signaure de la méthode où elle est lancée...
 
-Votre code compile, mais vos tests sont bien au ROUGE !
-C'est normal puisque nous n'avons pas encore écrit le code de production lié à l'exception...
+Votre code compile, mais vos tests sont au ROUGE !
+C'est normal puisque nous n'avons pas encore écrit le code de production lié au traitement de l'exception...
 
 #### Etape GREEN : écrire le code de production au plus vite
 
@@ -758,7 +768,7 @@ Bon, et puis on se dit qu'il faudra ensuite surement écrire deux autres tests d
 ```
 
 
-Dans l'ouvrage de référence sur le TDD classique ([Test Driven Development: By Example](https://www.amazon.fr/Test-Driven-Development-Kent-Beck/dp/0321146530)), [Kent Beck](https://twitter.com/KentBeck) préconise de faire de petits pas à chaque itération (*baby steps*) voire de tous petits pas (*tiny steps*). **La taille du pas c-a-d le choix du test suivant va dépendre de la confiance qu'à le développeur en son code.** Le pas du test doit être choisi de manière à ce que l'étape GREEN puisse être réalisée **le plus rapidement possible.** Si vous passez trop de temps à faire passer votre test au VERT, c'est que votre pas était trop grand et donc qu'il faut revenir dans l'atepe ROUGE et écrire un test qui permet de faire un pas plus petit...
+Dans l'ouvrage de référence sur le TDD classique ([Test Driven Development: By Example](https://www.amazon.fr/Test-Driven-Development-Kent-Beck/dp/0321146530)), [Kent Beck](https://twitter.com/KentBeck) préconise de faire de petits pas à chaque itération (*baby steps*) voire de tous petits pas (*tiny steps*). **La taille du pas c-a-d le choix du test suivant va dépendre de la confiance qu'à le développeur en son code.** Le pas du test doit être choisi de manière à ce que l'étape GREEN puisse être réalisée **le plus rapidement possible.** Si vous passez trop de temps à faire passer votre test au VERT, c'est que votre pas était trop grand et donc qu'il faut revenir dans l'étape ROUGE et écrire un test qui permet de faire un pas plus petit...
 
 Bien que les **bonnes pratiques de tests recommandent d'écrire une seule assertion par test**, on peut tout de même se demander si, dans le cas du test pour une position hors des limites de l'espace jeu, il ne serait pas possible d'écrire directement un test *généralisé* avec quatre assertions indépendantes au sein de ce test pour tester la *bonne* levée de l'exception `HorsEspaceJeuException` dans les quatre directions ? 
 Si vous pensez avoir assez confiance pour pouvoir écrire le code de production correspondant rapidement, vous pouvez écrire un tel test. 
@@ -802,8 +812,8 @@ Implémenter donc le nouveau test ` test_UnNouveauVaisseauPositionneHorsEspaceJe
 	}
 ```
 
-Votre code compile, vos tests sont bien au ROUGE !  
-(L'erreur de test détectée vient logiquement de la ligne de commande de la première assertion en échec à savoir : `fail("Position trop à gauche : devrait déclencher une exception HorsEspaceJeuException");`)
+Votre code compile (en ajoutant bien sûr un `import static org.junit.Assert.fail;`) ... mais vos tests sont au ROUGE !  
+L'erreur de test détectée vient logiquement de la ligne de commande de la première assertion en échec à savoir : `fail("Position trop à gauche : devrait déclencher une exception HorsEspaceJeuException");`)
 	
 #### Etape GREEN : écrire le code de production au plus vite
 
@@ -859,8 +869,9 @@ Le code de la méthode `positionnerUnNouveauVaisseau` devient donc  :
 > **Vous venez de faire des modifications dans votre code...**  
 > ***N'oubliez pas de relancer les tests pour vérifier que le comportement de votre code n'a pas changé !***
 
-C'est VERT !!! Bon, je ne trouve pas le `if` soit très lisible et montre bien l'intention du code. Le but du `if` est de détecter si les coordonnées ne se trouvent pas dans l'espace de jeu. Pour montrer cette négation, je préférerais que mon `if` commence par `!`.  
-Rajoute un `!` nécessite d'inverser l'expression booléene qui suit pour continuer à faire passer les tests au VERT c-a-d de remplacer les `||` par des `&&` et les `<` et `>` par des `>=` et `<=` (question de logique booléenne)
+C'est VERT !!!  
+Bon, je trouve maintenant que le `if` n'est pas très lisible et qu'il ne montre pas bien l'intention du code. Le but du `if` est de détecter si les coordonnées ne se trouvent pas dans l'espace de jeu. Pour montrer cette négation, je préférerais que mon `if` commence par `!`.  
+Rajouter un `!` nécessite d'inverser l'expression booléene qui suit pour continuer à faire passer les tests au VERT c-a-d de remplacer les `||` par des `&&` et les `<` et `>` par des `>=` et `<=` (question de logique booléenne)
 
 Pour modifier le code en ce sens, vous avez deux possibilités :  
 - soit le faire à la main (avec tous les risques d'erreur que cela comporte...oui bien sûr, vous avez les tests pour faire les shadocks et réussir finalement à écrire la bonne expression).    
@@ -868,7 +879,7 @@ Pour modifier le code en ce sens, vous avez deux possibilités :
 
 Nous allons bien sûr utiliser l'option *automatique* de l'IDE. Voici sous Eclipse comment vous pouvez procéder :   
 - Sélectionnez le code de l'expression booléenne à l'intérieur des parenthèses du `if` à savoir : `((x<0) || (x >= longueur))  || ((y<0) || (y >= hauteur))`.  
-- A l'aide d'un clic droit, sélectionnez le menu `QuickFix` : un certain nombres d'opérations applicables sur votre code vous est proposé. Cliquez une seule fois sur `Pull negation up` pour prévisualiser le changement attendu dans la boîte jaune. Si ce résultat vous convient double-cliquez sur `Pull negation up` afin que ce changement soit effectif dans votre code. Et hop, en clic, le tour est joué, vous devriez avoir un code semblable au suivant :
+- A l'aide d'un clic droit, sélectionnez le menu `QuickFix` : un certain nombres d'opérations applicables sur votre code vous sont proposées. Cliquez une seule fois sur `Pull negation up` pour prévisualiser le changement attendu dans la boîte jaune. Si ce résultat vous convient double-cliquez sur `Pull negation up` afin que ce changement soit effectif dans votre code. Et hop, en clic, le tour est joué, vous devriez avoir un code semblable au suivant :
 
 ```JAVA   
 
@@ -916,23 +927,28 @@ Des exemples de refactoring de base sous Eclipse sont donnés [ici](http://www.j
 
 ##### 2. Refactoring du code de test
 
-Le code de test est aussi important que le code de production : lui aussi doit être soigné, facilement lisible, expressif et pour cela donc donc parfois être refactoré.  
+Le code de test est aussi important que le code de production : lui aussi doit être soigné, facilement lisible, expressif. Il est donc nécessaire de s'interroger aussi sur la nécessité de le refactorer ou pas... 
 
-Pour commencer, il y a redondance au niveau des tests puisque le scénario du test `test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropADroite_UneExceptionEstLevee()` est aussi testé dans `test_UnNouveauVaisseauPositionneHorsEspaceJeu_DoitLeverUneException()`.  
+Prenons donc maintenant le temps d'examiner le code de la classe `SpaceInvadersTest`.  
+  
+Pour commencer, nous constations une redondance au niveau des tests puisque le scénario du test `test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropADroite_UneExceptionEstLevee()` est aussi testé dans `test_UnNouveauVaisseauPositionneHorsEspaceJeu_DoitLeverUneException()`.  
+
 Vous pouvez donc supprimer la méthode `test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropADroite_UneExceptionEstLevee()` puisque ce test est couvert par l'autre méthode.
 
 > **Vous venez de faire des modifications dans votre code...**  
 > ***N'oubliez pas de relancer les tests pour vérifier que le comportement de votre code n'a pas changé !***
 
 
-Si vous relisez les test écrits jusqu'à présent, vous constaterez une redondance au niveau de l'étape d'initialisation *A*rrange qui est la même pour ces trois tests, à savoir l'instruction : `SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);`   
+Si vous relisez les test écrits jusqu'à présent, vous constaterez une redondance au niveau de l'étape d'initialisation *A*rrange qui est la même pour les trois tests actuellement présents dans la classe `SpaceInvaders`, à savoir l'instruction : `SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);`   
 Or, Junit permet grâce à l'annotation `@Before` de définir des traitements à exécuter systématiquement avant chaque test.
 
-Pour procéder à la mise en place de `@Before` nous devez donc :
+Pour procéder à la mise en place de `@Before` vous devez donc :
 
-- dans un premier temps, créer une méthode d'initialisation correctement annotée avec l'instruction souhaitée, avec une déclaration de `SpaceInvaders` comme attribut de la classe :
+- dans un premier temps, créer une méthode d'initialisation correctement annotée avec l'instruction souhaitée et une déclaration de `SpaceInvaders` comme attribut de la classe :
 
 ```JAVA
+
+    import org.junit.Before;
 
     public class SpaceInvadersTest {
 	
@@ -963,7 +979,9 @@ Il semblerait que nous ayons fait le tour pour le moment de la fonctionnalité *
 Maintenant que le vaisseau est en place dans notre espace de jeu, nous aimerions bien pouvoir jouer avec et donc les prochains tests vont concernés ce qui tourne autour du déplacement du vaisseau dans l'espace jeu, et si pour commencer on essayait de **déplacer le vaisseau vers la droite dans l'espace jeu**.
 
 
-***Remarque : Votre fonctionnalité étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version !***
+***Remarque : Votre fonctionnalité étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version*** :  
+- avec un message de commit qui reprend le but de la fonctionnalité (***positionner un nouveau vaisseau***)   
+- en prenant bien soin AVANT de cliquer sur le bouton **`Commit`** de cocher en plus le `Status` des deux nouveaux fichiers **`Vaisseau.java`** et **`HorsEspaceJeuException`**. Vérifiez une fois le commit effectué que ces deux fichiers sont bien précédés d'une icône en forme de **cylindre orange**.
 
 ## Fonctionnalité n°3 : Déplacer le vaisseau vers la droite dans l'espace de jeu <a id="déplacerVaisseauDroite"></a>
 
@@ -1016,7 +1034,7 @@ Une réflexion autour de la méthode à tester s'impose pour écrire ce test !
 Avant d'écrire la ligne de code correspond à l'étape *A*ct de ce test, nous devons comprendre et décider comment le déplacement du vaisseau dans l'espace jeu est géré : par qui et comment, ce qui revient à se demander : **quelle méthode de quelle classe doit-on appeler ?** : écrire le test avant le code revient donc à faire un premier choix de conception.
 
 Pour l'instant, on a deux classes : `SpaceInvaders` et `Vaisseau`. 
-La question que l'on se pose pour écrire ce test est **où doit être implémenté le déplacement ?Qui a la responsabilité de ce déplacement ?**
+La question que l'on se pose pour écrire ce test est **où doit être implémenté le déplacement ? Qui a la responsabilité de ce déplacement ?**
 
 A priori, le `Vaisseau` devrait avoir la responsabilité de gérer son propre déplacement (vers la droite pour commencer) :  une méthode du genre `seDeplacerVersLaDroite` devrait donc être apparaître dans la classe `Vaisseau`.
 
@@ -1040,7 +1058,7 @@ Bon ben voilà, nous sommes prêt à completer l'étape *A*ct du test par un app
 		
 		spaceinvaders.positionnerUnNouveauVaisseau(7,9);
 
-		spaceinvaders.deplacerVaisseauVersLaDroite;
+		spaceinvaders.deplacerVaisseauVersLaDroite();
 		
 		assertEquals("" + 
 		"...............\n" + 
@@ -1056,7 +1074,7 @@ Bon ben voilà, nous sommes prêt à completer l'étape *A*ct du test par un app
 	}
 ```
 
-Ecrire ce test dans la classe `SpaceInvadersTest`.  
+Ajouter ce test dans la classe `SpaceInvadersTest`.  
 
 Faire compiler ce test en générant automatiquement via l'IDE la méthode `deplacerVaisseauVersLaDroite`.
 
@@ -1070,10 +1088,10 @@ L'étape RED est donc terminée, nous pouvons passer à l'étape GREEN...
 > It is also more an act of documentation than of verification (Robert. C. Martin)
 
  * Effectivement, **nous venons de faire des choix de conception lors de l'écriture de notre test** puisque nous venons de décider que la classe `SpaceInvaders` disposerait d'un méthode de type `void deplacerVaisseauVersLaDroite` et que la classe `Vaisseau` allait également disposer d'une méthode de type `void seDeplacerVersLaDroite`.
- Pour l'instant, ce sont des choix de conception à petite échelle (locaux autour du déplacement), pertinents à l'instant t où on écrit ce test. Ils pourront (ou non) être remis en question lors d'itérations futures dans les étapes refactoring s'il s'avère nécessaire de faire évoluer la conception vers une conception plus simple lorsque de nouveaux tests seront ajoutés (et donc de la complexité au niveau du code de production).  
+ Pour l'instant, ce sont des choix de conception à petite échelle (locaux autour du déplacement), pertinents à l'instant t où on écrit ce test. Ils pourront (ou non) être remis en question lors d'itérations futures dans les étapes refactoring s'il s'avère nécessaire de faire évoluer la conception vers une conception plus simple lorsque de nouveaux tests seront ajoutés (et donc de la complexité ajoutée au niveau du code de production).  
 On comprend mieux ainsi pourquoi l'acronyme TDD, avant d'être communément associé à *T*est *D*riven *D*evelopment (développement dirigé par les tests), avait initialement été utilisé pour *T*est *D*riven ***D*esign** (**conception** dirigée par les tests).
 
- * D'autre part, consulter le fichier de tests `SpaceInvadersTest` montre bien que **les tests peuvent aussi servir de documentation au code.** En effet, Si quelqu'un d'extérieur à votre projet devait reprendre votre code, il pourrait savoir exactement où vous en êtes dans votre développement juste en lisant les tests (ce que vous avez implémenté qui est couvert par les tests et ce que nous n'avez pas implémenté).
+ * D'autre part, consulter le fichier de tests `SpaceInvadersTest` montre bien que **les tests peuvent aussi servir de documentation au code.** En effet, Si quelqu'un d'extérieur à votre projet devait reprendre votre code, il pourrait savoir exactement où vous en êtes dans votre développement juste en lisant les tests : ce que vous avez implémenté (comportement qui est couvert par les tests) et ce que nous n'avez pas encore implémenté (comportement qui n'apparaît pas à la lecture des tests).
 
 
 #### Etape GREEN : écrire le code de production au plus vite
@@ -1097,7 +1115,7 @@ et
     public class Vaisseau {
         //...
 	    public void seDeplacerVersLaDroite() {
-		      this.x = this.x + 1 ;;
+		      this.x = this.x + 1 ;
 	   }
     }
 ```
@@ -1141,7 +1159,9 @@ Ce qui change par rapport au test précédent est le contexte initial du test c-
 	}
 ```
 
-Ce code devrait compiler (tout a déjà implémenté lors du test précédent).
+Ajouter ce test dans la classe `SpaceInvadersTest`.  
+
+Ce code devrait compiler (tout a déjà implémenté lors du test précédent).  
 Exécuter ce code afin de vérifier qu'il échoue !
 
 #### Etape GREEN : écrire le code de production au plus vite
@@ -1153,7 +1173,7 @@ La méthode `deplacerVaisseauVersLaDroite` de la classe `SpaceInvaders` doit êt
 ```JAVA
 
    	public void deplacerVaisseauVersLaDroite() {
-		if (vaisseau.getX()< (longueur-1)) vaisseau.seDeplacerVersLaDroite();
+        if (vaisseau.getX()< (longueur-1)) vaisseau.seDeplacerVersLaDroite();
 	}
 
 ```
@@ -1164,7 +1184,7 @@ Ce code qui permet de tester la valeur limite en bordure de l'espace jeu impliqu
 ```JAVA
 
    	public int getX() {
-		return this.x;
+        return this.x;
 	}
 ```
 
@@ -1184,7 +1204,7 @@ Il semblerait que nous ayons fait le tour pour le moment de la fonctionnalité q
 Il ne reste donc plus maintenant qu'à s'intéresser à la fonctionnalité qui permet de **déplacer le vaisseau vers la gauche dans l'espace jeu**.
 
 
-***Remarque : Votre fonctionnalité étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version !***
+***Remarque : Votre fonctionnalité (déplacer le vaisseau vers la droite) étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version !***
 
 ## Fonctionnalité n°4 : Déplacer le vaisseau vers la  gauche dans l'espace de jeu <a id="déplacerVaisseauGauche"></a>
 
@@ -1228,7 +1248,7 @@ Le test pour vérifier le comportement normal s'écrit de la même manière que 
 
 ```
 
-Ecrire ce test dans la classe `SpaceInvadersTest`.  
+Ajouter ce test dans la classe `SpaceInvadersTest`.  
 
 En vous inspirant de ce qui a été fait précédemment pour le déplacement sur la droite, faites compiler puis échouer ce test (**Etape RED**)
 
@@ -1278,6 +1298,9 @@ Qu'en pensez-vous ?
 Une fois l'**étape de REFACTORING** terminée, n'oubliez pas de vous poser la question : **Quel est donc le prochain test  à écrire ?**   
 Il semblerait que nous ayons fait le tour pour le moment des fonctionnalités prévues dans le backlog de sprint...
 
+***Remarque : Votre fonctionnalité (déplacer le vaisseau vers la gauche étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version !***
+
+
 ## Un petit coup d'oeil sur la couverture de code ...
 
 Peut-être serait-il intéressant de jeter maintenant un petit coup d'oeil sur la **couverture de code par les tests**. 
@@ -1285,14 +1308,14 @@ Peut-être serait-il intéressant de jeter maintenant un petit coup d'oeil sur l
 Placez-vous sur le fichier de test `SpaceInvadersTest` et lancez Coverage via un clic droit suivi de **`Run As -> Coverage As -> Junit`**   
 Rappel : le tutoriel sur la couverture de code par les tests se trouve [ici](https://github.com/iblasquez/Refactoring_PremierExempleFowler/blob/master/refactoring_Step0_miseEnPlaceTests.md).
 
-Les taux de couverture s'affichent, de manière plus ou moins détaillé, dans le vue **`Coverage View`**.
+Les taux de couverture s'affichent, de manière plus ou moins détaillée, dans la vue **`Coverage View`**.
 Ouvrir `spaceInvaders` puis `src\main\java` puisque nous nous intéressons à la couverture de code. Que constatez-vous ?
 La classe `Vaisseau` est pour l'instant à 100% de couverture.  
 La classe `HorsEspaceJeuException` est pour l'instant à 100% de couverture.  
 La classe `SpaceInvaders` est à 97,7% de couverture (dans mon projet).
 
 Double cliquez sur `SpaceInvaders` depuis la vue `Coverage` pour l'ouvrir.  
-Le surlignage **ROUGE** montrer une absence de couverture de la ligne de code de la méthode `toString`. C'est normal puisque pour l'instant dans notre programme nous n'appelons pas (plus) la méthode `toString`. La méthode `toString` est donc devenu du *code mort*. Et si on essayait de la supprimer. Supprimer cette méthode et surtout...
+Le surlignage **ROUGE** montre une absence de couverture de la ligne de code de la méthode `toString`. C'est normal puisque pour l'instant dans notre programme nous n'appelons pas (plus) la méthode `toString`. La méthode `toString` est donc devenu du *code mort*. Et si on essayait de la supprimer. Supprimer cette méthode et surtout...
 
 > **Vous venez de faire des modifications dans votre code...**  
 > ***N'oubliez pas de relancer les tests pour vérifier que le comportement de votre code n'a pas changé !***
@@ -1334,7 +1357,7 @@ Vous devriez obtenir un nuage de mots proche de celui-ci :
 ![Nuage de mots du code source à la fin de l'itération](images/WordCloud_S1.PNG)
 
 ## A propos des commentaires dans le code
-Vous avez remarqué que si le code est **explicite et montre bien son intention**, il n'y a *pas besoin de commentaires pour expliquer le COMMENT* c-a-d ce que fait votre code.... 
+Vous avez remarqué que si le code est **explicite et montre bien son intention**, il n'y a *pas besoin de commentaire pour expliquer le COMMENT* c-a-d ce que fait votre code.... 
 Et parce que des images valent mieux qu'un long discours, jetez un petit coup d'oeil [ici](https://github.com/iblasquez/Refactoring_PremierExempleFowler/blob/master/commentaires.md)
 
 
@@ -1343,10 +1366,15 @@ Et parce que des images valent mieux qu'un long discours, jetez un petit coup d'
 En ce qui concerne la gestion de version, voici comment vous devrez procédez pour les séances suivantes :
 
 * idéalement un commit doit être effectuée à chaque fois qu'une fonctionnalité est finie
-* idéalement une fonctionnalité devrait être développée dans une branche dédiée et fusionner (merger) dans `master` lorsque la fonctionnalité est terminée de manière à ce que `master` soit toujours fonctionnel (avec des tests AU VERT).
+* idéalement une fonctionnalité devrait être développée dans une branche dédiée et fusionner (merger) dans `master` lorsque la fonctionnalité est terminée de manière à ce que `master` soit toujours fonctionnel (avec des tests AU VERT). Toutefois, dans le cadre du module M2104, nous vous rappelons que pour commencer vous ne travaillerez uniquement sur `master` pour vous permettre de vous familiariser avec le gestionnaire de version.
 * A la fin chaque séance, vous devez tager votre dernier commit (contenant du code fonctionnel) et pousser votre historique sur Github.
 
-C'est d'ailleurs ce que vous devez faire maintenant, en vous aidant du tutoriel sur Git disponible [ici](https://github.com/iblasquez/tuto_git/blob/master/egit/git_egit_tutoriel.md), committez votre code avec un message de commit approprié du genre **Déplacer un vaisseau dans l'espace de jeu** et poussez votre code sur Github.
+C'est d'ailleurs ce que vous devez faire maintenant, en vous aidant du tutoriel sur Git disponible [ici](https://github.com/iblasquez/tuto_git/blob/master/egit/git_egit_tutoriel.md) et/ou des instructions suivantes :
+  
+* **Committez** votre code une dernière fois avec un message du genre "refactoring du toString".  
+* **Taggez** votre dernier commit. Pour cela, placez-vous dans la vue **`History`** sur ce dernier commit. A l'aide d'un **clic droit**, choisissez **`Create Tag`** à l'aide d'un clic droit. Dans **`Tag Name`**, donnez le nom du tag par exemple **`s1`**.
+Vous pouvez aussi renseigner la partie **`Tag Message`** par exemple avec **`déplacer un vaisseau dans l'espace de jeu`**, puis cliquer sur **`Create Tag`**.
+* et pour terminer **Pousser** (**`Push`**) votre code vers votre dépôt distant sur Github. (`Push`)
 
 
 ## Consignes relatives au module M2104

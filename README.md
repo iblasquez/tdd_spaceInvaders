@@ -112,4 +112,4 @@ Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions
 
 En savoir plus sur [les licences Creative Commons](https://creativecommons.org/licenses/?lang=fr-FR) ...
 
-Toutefois, toute personne enseignant ou ayant enseignée au département Informatique de l'IUT du Limousin doit demander une autorisation préalable par écrit si elle souhaite utiliser les documents de ce dépôt.
+Toutefois, toute personne enseignant ou ayant enseignée au département Informatique de l'IUT du Limousin doit demander une autorisation préalable par écrit si elle souhaite utiliser les documents de ce dépôt. :smile:
