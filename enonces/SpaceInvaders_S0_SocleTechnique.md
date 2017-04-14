@@ -37,9 +37,10 @@ Pour cela, vous devez suivre les étapes suivantes :
 -> de **pusher** le contenu du dépôt local vers le dépôt distant pour vérifier que l'opération a bien été configurée.
 
 
-* Se rendre sur le dépôt distant (**sur Github**) afin :  
--> de vérifier que l'opération push a été effectuée correctement, puis   
--> créer (depuis Github) un **`README.md`** et **committer** l'ajout de ce **`README`**   
+* Se rendre sur le dépôt distant (**sur Github**) afin de :  
+-> vérifier que l'opération push a été effectuée correctement, puis   
+-> créer (depuis Github) un **`README.md`** qui pourra par exemple contenir : *Implémentation du projet space invaders en TDD à partir de https://github.com/iblasquez/tdd_spaceInvaders*. Pour en savoir un peu plus sur ce que devrait contenir un README, jetez un petit coup d'oeil [ici](https://help.github.com/articles/about-readmes/).  
+-> et **committer** l'ajout de ce **`README`**   
 
 * Revenir sous Eclipse afin de :  
 -> configurer l'option **`Fetch` (VERT)** de votre Remote  
