@@ -48,12 +48,22 @@ Pour cela, vous devez suivre les étapes suivantes :
 
 Votre projet **`spaceinvaders`** est maintenant prêt pour le suite du mini-projet !
 
-
 Remarques :   
 - Pour avoir plus de détail sur la mise en place de git sur un projet Eclipse, vous pouvez en vous aider du [Tutoriel de découverte de Git (au travers d'EGit)](https://github.com/iblasquez/tuto_git/blob/master/egit/git_egit_tutoriel.md) et/ou du [mémo associé](https://github.com/iblasquez/tuto_git/blob/master/egit/git_egit_memo.md).  
 - Pour personnaliser vos messages de commit avec des emojis, vous pouvez vous jeter un petit coup d'oeil à ce guide : [An emoji guide for your commit messages](https://gitmoji.carloscuesta.me/)
 
-### 2. Le workflow le plus simple pour commencer
+
+### 2. Ajout de collaborateurs
+
+Nous allons maintenant ajouter des **collaborateurs** à votre dépôt.    
+Pour cela, rendez-vous sur votre dépôt Github et cliquez sur **`Settings`**.  
+Choisissez **`Collaborators`** (Github va peut-être vous demander de resaisir votre mot de passe).  
+Dans le champ `Search by username, full name or email address`, tapez `iblasquez` puis cliquer sur `Add collaborator`. Vous venez de m'ajouter en tant que collaborateur de votre dépôt :smile: !
+  
+Ajoutez également, via son identifiant Github ou son adresse email, votre binôme ET votre enseignant de TP.
+
+
+### 3. Le workflow le plus simple pour commencer
 Un des buts de ce mini-projet est de vous permettre de prendre la *bonne* habitude de versionner votre code.
 
 Remarque : Dans le cadre du module M2104, comme vous travaillerez juste en binôme sur le même projet et  comme vous faites vos premiers pas avec un gestionnaire de versions, vous adopterez,  dans une premier temps, le workflow le plus simple possible (pas de branche, juste des commits dans la branche principale `master` avec un *tag* sur le dernier commit en fin de séance).   
@@ -63,8 +73,6 @@ Toutefois, pour ceux qui sont déjà familarisés avec un gestionnaire de versio
 ## Déposer sur Github <a id="deposersurGithub"></a>
 
 Vous pousserez votre code fonctionnel en fin de chaque séance de TP sur sur un dépôt github privé (ou public si le coeur vous en dit).
-
-Remarque : Vous devez en plus fournir par mail, l'adresse du dépôt github de votre projet à votre enseignant de TP. Veillez à ce que votre enseignant ait bien les droits de lecture sur votre projet. 
 
 
 ### Continuez par le [Sprint 0 : Rapide analyse du problème](SpaceInvaders_S0_QuickDesignSession.md)
