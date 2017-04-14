@@ -311,7 +311,7 @@ Créer un nouveau vaisseau avec sa position dans l'espace de jeu revient, dans u
 ``` JAVA
 
     public void positionnerUnNouveauVaisseau(int x, int y) {
-		   Vaisseau vaisseau = new Vaisseau (x,y);
+        Vaisseau vaisseau = new Vaisseau (x,y);
 	}
 ```
 
@@ -330,7 +330,7 @@ Or si nous déclarons `vaisseau` dans la méthode `positionnerUnNouveauVaisseau`
 	//... Code déjà écrit
 
 	public void positionnerUnNouveauVaisseau(int x, int y) {
-		vaisseau = new Vaisseau(x, y);
+        this.vaisseau = new Vaisseau(x, y);
 
 	}
 	
