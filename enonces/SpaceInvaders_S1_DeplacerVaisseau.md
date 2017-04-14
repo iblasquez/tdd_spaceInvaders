@@ -763,7 +763,7 @@ Bon, et puis on se dit qu'il faudra ensuite surement écrire deux autres tests d
 
    	public void test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropAGauche_UneExceptionEstLevee{...}
 
-   	public void test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropEnBas_UneExceptionEstLevee{...}
+   	public void test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropEnHaut_UneExceptionEstLevee{...}
 
 ```
 
