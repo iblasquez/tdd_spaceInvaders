@@ -94,7 +94,16 @@ Nous commencerons donc ce mini-projet par l'installation du socle technique : c'
 
 
 ## Références
-Les références sont disponibles [ici](SpaceInvaders_Refrences.md)
+
+Ce mini-projet est en relation avec les enseignements suivants :
+
+- Cours : [Quid du Test dans un développement logiciel ?](https://github.com/iblasquez/enseignement-iut-m2104/blob/master/slides/7_Tests.pdf)  
+- Cours : [Sensibilisation aux bonnes pratiques de la programmation (qualité logicielle)](https://github.com/iblasquez/enseignement-iut-m2104/blob/master/slides/8_QualiteLogicielle_CleanCode.pdf)
+- Présentation : [Coding Dojo : une aide à la pratique du TDD](http://iblasquez.github.io/presentation_TDD_CodingDojo)
+- Atelier TDDlego : [Sensibilisation aux bonnes pratiques techniques du Software Craftsmanship : Lego® à la rescousse !](https://github.com/iblasquez/atelier-bonnes-pratiques-tdd-lego)
+- Tutoriel autour de [l'exemple *simplifié* du premier chapitre du livre Refactoring, Improving the Design of Existing Code de Martin Fowler](https://github.com/iblasquez/Refactoring_PremierExempleFowler)
+
+<!-- Les références sont disponibles [ici](SpaceInvaders_References.md) -->
 
 
 ## Commentaires, remarques et suggestions
