@@ -73,6 +73,7 @@ Ce mini-projet est découpé en plusieurs **sprints** :
 	- [Installation du socle technique](enonces/SpaceInvaders_S0_SocleTechnique.md)
 	- [Rapide Analyse du problème](enonces/SpaceInvaders_S0_QuickDesignSession.md) 
 - [Sprint 1 : Déplacer le vaisseau dans l'espace de jeu](enonces/SpaceInvaders_S1_DeplacerVaisseau.md)
+- [Sprint 2 : Dimensionner le vaisseau](enonces/SpaceInvaders_S2_DimensionnerVaisseau.md)
 
 Les xx premiers sprints sont écrits sous la forme de tutoriel : vous serez guidé pas à pas afin de vous plonger dans la démarche TDD et de vous apprendre en prendre en main votre IDE ;-)
 

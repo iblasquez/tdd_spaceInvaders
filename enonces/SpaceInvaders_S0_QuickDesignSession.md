@@ -32,10 +32,10 @@ En imaginant un scénario de jeu à partir de cette maquette, les premières fon
 - **positionner un nouveau vaisseau dans l'espace de jeu**  
 - **pouvoir déplacer le vaisseau vers la droite dans l'espace de jeu**
 - **pouvoir déplacer le vaisseau vers la gauche dans l'espace de jeu**
+- **pouvoir tirer un missile depuis le vaisseau**  
+- **faire monter le missile** 
 - **faire apparaître un envahisseur en haut à gauche de l'écran**
 - **faire déplacer automatiquement l'envahisseur de droite à gauche**     
-- **pouvoir tirer un missile depuis le vaisseau**  
-- **faire monter le missile**  
 - **détecter la collision entre le missile et l'envahisseur** 
 - **gérer la collision entre un missile et un envahisseur**
 - **détecter la fin de la partie**  
