@@ -18,7 +18,8 @@ Pour réaliser cet objectif, d'après notre rapide analyse, nous devons ajouter 
 - [faire en sorte qu'il soit impossible de positionner un nouveau vaisseau qui déborde de l'espace de jeu](#refactoDebordement)    
 - [déplacer un vaisseau vers la droite en tenant compte de sa dimension](#refactoDimensionDeplacementDroite)     
 - [déplacer un vaisseau vers la gauche en tenant compte de sa dimension](#refactoDimensionDeplacementGauche)     
-- [refactorer la classe de test `SpaceInvadersTest`](#refactoClasseTests)  
+- [refactorer la classe de test `SpaceInvadersTest`](#refactoClasseTests)   
+- [refactorer la classe `Vaisseau`](#refactoVaisseau) 
  
 
 
@@ -1093,13 +1094,272 @@ Remarque : La description de ce refactoring peut être consultée [ici](https://
 Ce refactoring permet d'éliminer un code smell bien connu, appelé **`Primitive Obsession`** (l'obsession des types primitifs). Ce code smell apparaît, entre autres, lorsqu'une liste de types primitifs apparaît lors qu'il serait possible de faire apparaître des objets.Il souligne un manque d'abstraction dans le code.
 
 
-La question que nous pourrions maintenant nous poser est de savoir si nous devons utiliser `Dimension` et `Position` dans la classe `Vaisseau` et refactorer cette classe. 
-Pour l'instant, dans ce sprint, nous choisissons de laisser la classe `Vaisseau` telle quelle avec ses types primitifs et ne pas nous lancer maintenant dans ce refactoring là...  
-...mais certainement que dans une itération future, vous déciderez de procéder à ce type de refactoring en fonction vos besoins **en terme de lisibilité et de maintenabilité du code**.
+
+## Refactorer la classe `Vaisseau` (un `Vaisseau` *a une* `Position` et *a une* `Dimension`) <a id="refactoVaisseau"></a>
+
+Jetez un petit coup d'oeil, via Object Aid UML, au fichier (`ucls`) pour visualiser le diagramme de classes de vos classes métiers. N'oubliez pas d'ajouter les nouvelles classes créés : `Dimension` et `Position`.
+
+Au vu de ce diagramme, n'avez-vous pas maintenant envie de refactorer la classe `Vaisseau` de manière à ce qu'elle soit associée à ces deux classes c-a-d faire apparaître un attribut de type `Dimension` et un attribut de type `Position` dans la classe `Vaisseau` de manière à ce que l'on puisse dire qu'un `Vaisseau` A-UNE `Dimension` et qu'un `Vaisseau` A-UNE `Position` ?
+
+
+### 1. Mise en place du refatoring autour de la position du `Vaisseau`
+
+#### 1.1 Déclarer le nouvel attribut de type `Position` (à la place des types primitifs)
+
+La position du vaisseau est actuellement représentée par les attributs `x` et `y`.
+
+Faire apparaître un attribut de type `Position` revient donc à remplacer dans un premier temps ces types primitifs par un seul nouvel attribut de type `Position`. Mais quel nom pourrait-on donner à ce nouvel attribut ? `x` et `y` représentaient les coordonnées marquant l'origine du vaisseau : nous choisissons donc d'appeler cette position `origine`.
+
+
+Le premier changement a apporté à la classe `Vaisseau` consiste donc à faire apparaître la `Position origine` en tant qu'attribut :
+
+```JAVA
+    
+    public class Vaisseau {
+
+       Position origine;
+       int longueur;
+       int hauteur;
+
+	   //...
+    }
+
+```   
+
+#### 1.2 Impact de la déclaration de ce nouvel attribut sur le(s) constructeur(s) 
+
+Supprimons ensuite l'erreur de compilation qui apparaît dans le constructeur.  
+Les instructions `this.x = x;` et `this.y = y;` du constructeur `Vaisseau` doivent donc être remplacées par une instanciation de la `Position` :
+
+    public Vaisseau(int longueur, int hauteur, int x, int y) {
+	   this.longueur=longueur;
+	   this.hauteur=hauteur;
+	   this.origine = new Position (x,y);
+	   }
+
+Remarque : Pour l'instant nous gardons la signature de ce constructeur, nous nous poserons la question de la surcharge des constructeurs en fin de refactoring.
+
+
+#### 1.3 Manipuler le nouvel attribut de type `Position` (à la place des types primitifs)
+
+Après ce changement, l'IDE soulève encore des erreurs de compilation, ce qui est tout à fait normal, puisqu'il est maintenant nécessaire de faire en sorte que le code manipule le nouveau type `Position`. On constate qu'il y a deux types de méthode :  
+- les méthodes qui effectuent juste une *lecture* de la position (consultation)  
+- les méthodes qui effectuent une nouvelle *écriture* de la position (modification)
+
+
+##### 1.3.1 Refactoring autour de la *lecture* de la `Position`.
+
+Les méthodes qui se contentent d'une **lecture** de la position sont les méthodes : `abscisseLaPlusADroite`, `abscisseLaPlusAGauche` et `ordonneeLaPlusBasse` et `ordonneeLaPlusHaute`.
+
+Pour manipuler la `Position` dans ces méthodes, il suffit :  
+- de remplacer les `this.x` par des `this.origine.abscisse()` et   
+- de remplacer les `this.y` par des `this.origine.ordonnée()`
+
+
+##### 1.3.2 Refactoring autour de la *lecture* de la `Position`.
+
+Les méthodes qui effectuent une **écriture** de la position sont les méthodes :v
+`seDeplacerVersLaDroite`, `seDeplacerVersLaGauche` et `positionner`
+
+Pour permettre l'écriture d'une nouvelle `Position` c-a-d la modification des coordonnées `x` et `y` de la `Position`, il faut tout d'abord intervenir dans la classe `Position` et ajouter deux nouvelles méthodes : `changerAbscisse()` et `changerOrdonnee()` :
+
+
+```JAVA
+
+    public class Position {
+    
+    //...
+
+        public void changerAbscisse(int nouvelleAbscisse) {
+             this.x = nouvelleAbscisse;
+        }
+
+        public void changerOrdonnee(int nouvelleOrdonnee) {
+            this.y = nouvelleOrdonnee;
+        }
+
+   }
+
+```
+
+Il est alors possible de procéder à l'écriture de la `Position origine` dans les trois méthodes précédentes en utilisant les méthodes  `changerAbscisse()` et `changerOrdonnee()` :
+
+
+```JAVA
+
+    public class Vaisseau {
+	
+	    //...
+	
+	   public void seDeplacerVersLaDroite() {
+		    this.origine.changerAbscisse(this.origine.abscisse()+1);
+	   }
+
+	
+       public void seDeplacerVersLaGauche() {
+		    this.origine.changerAbscisse(this.origine.abscisse()-1);
+	  }
+	
+	
+      public void positionner(int x, int y) {
+		  this.origine.changerAbscisse(x);
+		  this.origine.changerOrdonnee(y);
+      }
+}
+
+```
+
+
+> **Vous venez de faire des modifications dans votre code...**  
+> ***N'oubliez pas de relancer les tests pour vérifier que le comportement de votre code n'a pas changé !***
+
+
+Une fois que vous avez bien vérifié que vos tests passaient AU VERT (et uniquement si vous avez une BARRE VERTE), vous pouvez vous lancer dans le refactoring de la dimension !  
+  
+Remarque : Si vous n'arrivez pas à faire passer vos tests, vous trouverez [ici](src/Vaisseau_S2_ApresRefactoPosition.java) la classe `Vaisseau` telle que vous ariez dû l'obtenir si vous avez suivi pas à pas le refactoring précédent.
+
+
+
+### 2. Mise en place du refatoring autour de la dimension du `Vaisseau`
+
+Le refactoring autour de la `Dimension` va suivre les mêmes étapes que le refactoring précédent...
+
+#### 2.1 Déclarer le nouvel attribut de type `Dimension` (à la place des types primitifs)
+
+La dimension du vaisseau est actuellement représentée par les attributs `longueur` et `largeur`.
+
+Faire apparaître un attribut de type `Dimension` que nous appelerons `dimension`.
+
+
+Le premier changement a apporté à la classe `Vaisseau` consiste donc à faire apparaître la `Position origine` en tant qu'attribut :
+
+```JAVA
+    
+    public class Vaisseau {
+
+       Position origine;
+       Dimension dimension;
+
+	   //...
+    }
+
+```   
+
+#### 2.2 Impact de la déclaration de ce nouvel attribut sur le(s) constructeur(s) 
+
+Supprimons ensuite l'erreur de compilation qui apparaît dans le constructeur.  
+Les instructions `this.longueur = longueur;` et `this.largeur = largeur;` du constructeur `Vaisseau` doivent donc être remplacées par une instanciation de la `Dimension` :
+
+    public Vaisseau(int longueur, int hauteur, int x, int y) {
+	   this.dimension = new Dimension(longueur, hauteur);
+	   this.origine = new Position (x,y);
+	   }
+
+Remarque : Pour l'instant nous gardons la signature de ce constructeur, nous nous poserons la question de la surcharge des constructeurs en fin de refactoring.
+
+
+#### 2.3 Manipuler le nouvel attribut de type `Dimension` (à la place des types primitifs)
+
+Après ce changement, l'IDE soulève encore des erreurs de compilation, ce qui est tout à fait normal, puisqu'il est maintenant nécessaire de faire en sorte que le code manipule le nouveau type `Position`. On constate que dans ces erreurs seules la *lecture* de la dimension est utilisée (ce qui paraît assez logique puisque la dimension est fixée pour le moment une seule fois à la création du vaisseau).
+ 
+Pour ce refactoring, il n'y a donc aucune modification à apporte pour le moment dans la classe `Dimension` car les méthodes `longueur()` et `hauteur()` nous suffisent pour mettre en place le refactoring.
+
+
+Les méthodes qui effectuent une **lecture** de la dimension sont les méthodes : `abscisseLaPlusADroite`et  `ordonneeLaPlusHaute`.
+
+Pour manipuler la `Dimension` dans ces méthodes, il suffit :  
+- de remplacer les `this.hauteur` par des `this.dimension.hauteur()` et   
+- de remplacer les `this.longueur` par des `this.dimension.longueur()`
+
+
+> **Vous venez de faire des modifications dans votre code...**  
+> ***N'oubliez pas de relancer les tests pour vérifier que le comportement de votre code n'a pas changé !***
+
+
+
+### 3. Quid de la surcharges des constructeurs ?
+
+
+Pour l'instant de disposons de deux constructeurs dans la classe `Vaisseau`.  
+Nous ne toucherons pour l'instant pas à la signature de ces deux constructeurs qui prennent en paramètre les types primitifs.  
+
+Par contre, pour manipuler plus simplement le code par la suite, nous pouvons écrire maintenant dans la classe `Vaisseau` un nouveau constructeur qui prend en paramètre une `Dimension` et une `Position` et faire appel à ce constrcucteur et faire en sorte que le constructeur qui prend en paramètre les 4 types primitifs fassent appel à ce nouveau constructeur.
+
+En tenant compte de cette nouvelle modification, la classe `Vaisseau` à la fin de ce sprint devrait ressembler à :
+
+```JAVA
+
+     public class Vaisseau {
+
+	    private Position origine;
+	    private Dimension dimension;
+
+	    public Vaisseau(int longueur, int hauteur) {
+		    this(longueur, hauteur, 0, 0);
+	    }
+
+	   public Vaisseau(int longueur, int hauteur, int x, int y) {
+		   this(new Dimension(longueur, hauteur), new Position(x, y));
+	    }
+
+	    public Vaisseau(Dimension dimension, Position positionOrigine) {
+		    this.dimension = dimension;
+		    this.origine = positionOrigine;
+	    }
+
+	    public boolean occupeLaPosition(int x, int y) {
+		    return (estAbscisseCouverte(x) && estOrdonneeCouverte(y));
+	    }
+
+	    private boolean estOrdonneeCouverte(int y) {
+		   return (ordonneeLaPlusBasse() <= y) && (y <= ordonneeLaPlusHaute());
+	    }
+
+	    private boolean estAbscisseCouverte(int x) {
+		   return (abscisseLaPlusAGauche() <= x) && (x <= abscisseLaPlusADroite());
+	    }
+
+	    private int ordonneeLaPlusBasse() {
+		    return this.origine.ordonnee() - this.dimension.hauteur() + 1;
+	    }
+
+	    private int ordonneeLaPlusHaute() {
+		   return this.origine.ordonnee();
+	   }
+
+	   public int abscisseLaPlusADroite() {
+		   return this.origine.abscisse() + this.dimension.longueur() - 1;
+	   }
+
+	   public int abscisseLaPlusAGauche() {
+		   return this.origine.abscisse();
+	   }
+
+	   public void seDeplacerVersLaDroite() {
+		   this.origine.changerAbscisse(this.origine.abscisse() + 1);
+	   }
+
+	   public void seDeplacerVersLaGauche() {
+		   this.origine.changerAbscisse(this.origine.abscisse() - 1);
+	   }
+
+	   public void positionner(int x, int y) {
+		   this.origine.changerAbscisse(x);
+		   this.origine.changerOrdonnee(y);
+	   }
+
+    }
+
+```
+
+> **Vous venez de faire des modifications dans votre code...**  
+> ***N'oubliez pas de relancer les tests pour vérifier que le comportement de votre code n'a pas changé !***
+
+
 
 
 ***Remarque : Ce sprint est désormais terminé et la fonctionnalité *Dimensionner un vaisseau* est semble-t-elle terminée et fonctionnelle : il est temps de committer les derniers changements dans votre gestionnaire de version !***
-Les derniers changements ont essentiellement portés sur le refactoring du code de test pour prendre en compte la dimension du vaisseau. Le message du commit pourrait donc refléter ces activités en ressemblant par exemple au message suivant `refactoring code et test pour la dimension du vaisseau`. (Sans oublier d'ajouter les nouvelles classes créés comme `Dimension` et `Position` :smile:)
+Les derniers changements ont essentiellement portés sur le refactoring du code de test pour prendre en compte la dimension du vaisseau. Le message du commit pourrait donc refléter ces activités en ressemblant par exemple au message suivant `refactoring dimension et position du vaisseau`. (Sans oublier d'ajouter à l'index les nouvelles classes créés comme `Dimension` et `Position` :smile:)
 Remarque : Si vous le souhaitez, vous pouvez tagger ce dernier commit `S2` avec un message de tag du genre `code à la fin du sprint 2 (dimensionner un vaisseau)`.
  
 
@@ -1124,7 +1384,9 @@ Lancez la couverture de code à l'aide de Coverage (**`Run As -> Coverage As -> 
 
 ### Un petit coup d'oeil au diagramme de classes...
 
-Pour terminer, jetez un petit coup d'oeil, via Object Aid UML, au fichier (`ucls`) pour visualiser le diagramme de classes de vos classes métiers. N'oubliez pas d'ajouter les nouvelles classes créés : `Dimension` et `Position`.
+Pour terminer, jetez un petit coup d'oeil, via Object Aid UML, au fichier (`ucls`) pour visualiser le diagramme de classes de vos classes métiers. 
+
+Remarque : Si l'assocation entre les classes `Vaisseau` et `Dimension` et `Position` n'est pas visible, supprimez les classes `Dimension` et `Position` du diagramme et drag&droppre-les à nouveau !
 
 <!-- ## Code fin de Sprint 2
 ***Comme ce sprint est un tutoriel, vous pouvez retrouver le code que vous devriez obtenir en fin de séance ici c-a-d dans le répertoire ...*** -->
