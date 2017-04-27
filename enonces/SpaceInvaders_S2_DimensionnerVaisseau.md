@@ -86,7 +86,7 @@ En effet pour faire compiler ce nouveau test, un objet de la classe Vaisseau doi
    
 	public void positionnerUnNouveauVaisseau(int longueur, int hauteur, int x, int y) {
 			if (!estDansEspaceJeu(x, y))
-			    throw new HorsEspaceJeuException("Vous êtes en dehors de l'espace jeu");
+			    throw new HorsEspaceJeuException("La position du vaisseau est en dehors de l'espace jeu");
 
 			vaisseau = new Vaisseau(longueur,hauteur,x,y);
 	}
@@ -226,7 +226,7 @@ Transformez donc la méthode de la sorte :
 
 	public void positionnerUnNouveauVaisseau(int longueur, int hauteur, int x, int y) {
 		if (!estDansEspaceJeu(x, y))
-			throw new HorsEspaceJeuException("Vous êtes en dehors de l'espace jeu");
+			throw new HorsEspaceJeuException("La position du vaisseau est en dehors de l'espace jeu");
 
 		vaisseau = new Vaisseau(longueur, hauteur);
 		vaisseau.positionner(x, y);
@@ -607,12 +607,12 @@ Ecrire rapidement un code qui permet de lever l'exception `DebordementEspaceJeuE
 
 	public void positionnerUnNouveauVaisseau(int longueur, int hauteur, int x, int y) {
 		if (!estDansEspaceJeu(x, y))
-			throw new HorsEspaceJeuException("Vous êtes en dehors de l'espace jeu");
+			throw new HorsEspaceJeuException("La position du vaisseau est en dehors de l'espace jeu");
 
 		if ( !estDansEspaceJeu(x+longueur-1,y))
-			throw new DebordementEspaceJeuException("Vous débordez à droite de l'espace jeu");
+			throw new DebordementEspaceJeuException("Le vaisseau déborde de l'espace jeu vers la droite à cause de sa longueur");
 		if (!estDansEspaceJeu(x,y-hauteur+1))
-			throw new DebordementEspaceJeuException("Vous débordez à gauche de l'espace jeu");
+			throw new DebordementEspaceJeuException("Le vaisseau déborde de l'espace jeu vers le bas à cause de sa hauteur");
 
 		vaisseau = new Vaisseau(longueur, hauteur);
 		vaisseau.positionner(x, y);
@@ -1059,15 +1059,15 @@ Une fois que toutes les méthodes de tests ont été transformées et qu'elles a
 		int y = position.ordonnee();
 		
 		if (!estDansEspaceJeu(x, y))
-			throw new HorsEspaceJeuException("Vous êtes en dehors de l'espace jeu");
+			throw new HorsEspaceJeuException("La position du vaisseau est en dehors de l'espace jeu");
 
 		int longueur = dimension.longueur();
 		int hauteur = dimension.hauteur();
 		
 		if (!estDansEspaceJeu(x + longueur - 1, y))
-			throw new DebordementEspaceJeuException("Vous débordez de l'espace jeu");
+			throw new DebordementEspaceJeuException("Le vaisseau déborde de l'espace jeu vers la droite à cause de sa longueur");
 		if (!estDansEspaceJeu(x, y - hauteur + 1))
-			throw new DebordementEspaceJeuException("Vous débordez de l'espace jeu");
+			throw new DebordementEspaceJeuException("Le vaisseau déborde de l'espace jeu vers le bas à cause de sa hauteur");
 
 		vaisseau = new Vaisseau(longueur, hauteur);
 		vaisseau.positionner(x, y);
@@ -1285,7 +1285,7 @@ Pour manipuler la `Dimension` dans ces méthodes, il suffit :
 
 
 
-### 3. Quid de la surcharges des constructeurs ?
+### 3. Quid de la surcharge des constructeurs ?
 
 
 Pour l'instant de disposons de deux constructeurs dans la classe `Vaisseau`.  

@@ -913,6 +913,23 @@ Bon, et si on rendait tout cela un peu plus explicite avec un **Extract Method**
 > **Vous venez de faire des modifications dans votre code...**  
 > ***N'oubliez pas de relancer les tests pour vérifier que le comportement de votre code n'a pas changé !***
 
+Pour terminer, nous allons modifié le message levé par l'exception et le rendre plus explicite en mentionnat les mots *vaisseau* et *position* de la manière suivante pour mieux identifier par la suite d'où vient l'exception lorsque celle-là sera levée :smile:
+
+```JAVA  
+
+	public void positionnerUnNouveauVaisseau(int x, int y) {
+		
+		if (  !estDansEspaceJeu(x, y) )
+			throw new HorsEspaceJeuException("La position du vaisseau est en dehors de l'espace jeu");
+	
+		vaisseau = new Vaisseau(x, y); 
+	}
+
+```
+
+> **Vous venez de faire des modifications dans votre code...**  
+> ***N'oubliez pas de relancer les tests pour vérifier que le comportement de votre code n'a pas changé !***
+
 **Remarques :**
 
 * **Le menu `Quick Assist`** d'Eclipse propose des transformations locales autour de votre code. En fonction du code sélectionné, vous pouvez retrouver [ici](http://help.eclipse.org/mars/index.jsp) un aperçu des possibilités offertes par ce menu.
