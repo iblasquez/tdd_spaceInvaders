@@ -233,7 +233,7 @@ Il ne vous reste donc plus qu'à lancer votre application et interagir avec votr
 ***Au cas où***...   
 L'intégration du moteur graphique à notre jeu de Space Invaders nous a amené à modifier les classes suivantes :  
   
-* **`SpaceInvaders.java`** dont vous pouvez consulter une implémentation possible [ici](src/SpaceInvader_Spike.java)
+* **`SpaceInvaders.java`** dont vous pouvez consulter une implémentation possible [ici](src/SpaceInvaders_Spike.java)
 * **`DessinSpaceInvaders.java`** dont vous pouvez consulter une implémentation possible [ici](src/DessinSpaceInvaders_Spike.java)
 * **`Vaisseau.java`** dont vous pouvez consulter une implémentation possible [ici](src/Vaisseau_Spike.java)
 * **`Main.java`** dont vous pouvez consulter une implémentation possible [ici](src/Main_Spike.java)
