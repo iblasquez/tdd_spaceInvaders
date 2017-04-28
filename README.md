@@ -76,11 +76,13 @@ Ce mini-projet est découpé en plusieurs **sprints** :
 - [Sprint 2 : Dimensionner le vaisseau](enonces/SpaceInvaders_S2_DimensionnerVaisseau.md)
 - les autres sprints (à venir)
 
-Les xx premiers sprints sont écrits sous la forme de tutoriel : vous serez guidé pas à pas afin de vous plonger dans la démarche TDD et de vous apprendre en prendre en main votre IDE ;-)
+- [Spike : Prise en main et intégration d'un moteur graphique](SpaceInvaders_Spike_MoteurGraphique.md)
+
+Les deux premiers sprints sont écrits sous la forme de tutoriel et sont *extrêmement* détaillés : vous serez guidés pas à pas afin de vous plonger dans la démarche TDD et apprendre peu à peu à prendre en main votre IDE :smile:
 
 Au fil des sprints, vous aurez de plus en plus d'autonomie pour développer votre mini-projet qui devra bien sûr respecter au mieux les bonnes pratiques de qualité de code ...
 
-Un sprint un peu particulier (une sorte de [spike](http://agiledictionary.com/209/spike/)) doit également être ajouté. Ce sprint concerne la [mise en place du moteur graphique dans le jeu](enonces/SpaceInvaders_MoteurGraphique.md) et sera consacré à la prise en main d'un moteur graphique simplifié et à son intégration au jeu. Idéalement, ce sprint devrait être réalisée après le sprint 2 lorsque le vaisseau a une dimension. En réalité jusqu'à la livraison, le moteur graphique n'est pas vraiment nécessaire pour le développement de notre application puisque le comportement du jeu est vérifié et validé par les tests !    
+Un sprint un peu particulier (une sorte de [*spike*](http://agiledictionary.com/209/spike/)) doit également être ajouté. Il concernera la [mise en place d'un moteur graphique au sein de notre jeu](enonces/SpaceInvaders_MoteurGraphique.md) et sera consacré à la prise en main d'un moteur graphique simplifié et à son intégration au jeu. Idéalement, ce *spike* devrait être réalisée après le sprint 2 lorsque le vaisseau a une dimension. En réalité jusqu'à la livraison, le moteur graphique n'est pas vraiment nécessaire pour le développement de notre application puisque le comportement du jeu est vérifié et validé par les tests !    
 
 
 Remarque pour ce projet dans le cadre du module M2104 :

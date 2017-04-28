@@ -1049,7 +1049,8 @@ Pour chaque méthode de test :
 ### 3. Suppression de la surcharge pour ne conserver que la méthode `positionnerUnNouveauVaisseau(Dimension dimension, Position position)`
 
 Une fois que toutes les méthodes de tests ont été transformées et qu'elles appellent désormais la méthode `positionnerUnNouveauVaisseau(Dimension dimension, Position position)`, il n'est plus nécessaire de conserver la méthode `positionnerUnNouveauVaisseau` à 4 paramètres.   
-**Conservez donc uniquement la méthode `positionnerUnNouveauVaisseau` à deux paramètres de type `Dimension` et `Position`** (qui reprend tout simplement le code de la méthode `positionnerUnNouveauVaisseau` en l'adaptant à ces deux paramètres), de manière à faire apparaître dans la classe `SpaceInvaders` uniquement le code suivant :
+**Conservez donc uniquement la méthode `positionnerUnNouveauVaisseau` à deux paramètres de type `Dimension` et `Position`** (qui reprend tout simplement le code de la méthode `positionnerUnNouveauVaisseau` en l'adaptant à ces deux paramètres), de manière à faire apparaître dans la classe `SpaceInvaders` uniquement le code suivant :  
+Remarque : pour faciliter la lecture du code nous utilisons des variables locales que nous avons appelées `longueurVaisseau` et `hauteurVaisseau` (et non plus simplement `longueur` et `hauteur`).
 
 ```JAVA
 
@@ -1061,15 +1062,15 @@ Une fois que toutes les méthodes de tests ont été transformées et qu'elles a
 		if (!estDansEspaceJeu(x, y))
 			throw new HorsEspaceJeuException("La position du vaisseau est en dehors de l'espace jeu");
 
-		int longueur = dimension.longueur();
-		int hauteur = dimension.hauteur();
+		int longueurVaisseau = dimension.longueur();
+		int hauteurVaisseau = dimension.hauteur();
 		
-		if (!estDansEspaceJeu(x + longueur - 1, y))
+		if (!estDansEspaceJeu(x + longueurVaisseau - 1, y))
 			throw new DebordementEspaceJeuException("Le vaisseau déborde de l'espace jeu vers la droite à cause de sa longueur");
-		if (!estDansEspaceJeu(x, y - hauteur + 1))
+		if (!estDansEspaceJeu(x, y - hauteurVaisseau + 1))
 			throw new DebordementEspaceJeuException("Le vaisseau déborde de l'espace jeu vers le bas à cause de sa hauteur");
 
-		vaisseau = new Vaisseau(longueur, hauteur);
+		vaisseau = new Vaisseau(longueurVaisseau, hauteurVaisseau);
 		vaisseau.positionner(x, y);
 	}
 
@@ -1316,7 +1317,7 @@ En tenant compte de cette nouvelle modification, la classe `Vaisseau` à la fin 
 	    }
 
 	    public boolean occupeLaPosition(int x, int y) {
-		    return (estAbscisseCouverte(x) && estOrdonneeCouverte(y));
+		    return estAbscisseCouverte(x) && estOrdonneeCouverte(y);
 	    }
 
 	    private boolean estOrdonneeCouverte(int y) {
@@ -1399,8 +1400,8 @@ Remarque : Si l'assocation entre les classes `Vaisseau` et `Dimension` et `Posit
 <!-- ## Code fin de Sprint 2
 ***Comme ce sprint est un tutoriel, vous pouvez retrouver le code que vous devriez obtenir en fin de séance ici c-a-d dans le répertoire ...*** -->
 
-### Dans le cadre du module M2104 ou si vous souhaitez mettre en place une petite interface graphique, continuez par le [Spike : Mise en place du moteur graphique dans le jeu](SpaceInvaders_Spike_MoteurGraphique.md)
+### Dans le cadre du module M2104 ou si vous souhaitez mettre en place une petite interface graphique, continuez par le [Spike : Prise en main et intégration d'un moteur graphique](SpaceInvaders_Spike_MoteurGraphique.md)
  
-... sinon pour continuer à implémenter les fonctionnalités en TDD...
+... sinon pour continuez à implémenter les fonctionnalités en TDD et ...
 
-### Continuez par le [Sprint 3 : Tirer un missile depuis le vaisseau](SpaceInvaders_S3_TirerMissileDepuisVaisseau.md)
+### Continuez par le [Sprint 3 : Pouvoir régler la vitesse du vaisseau](SpaceInvaders_S3_ReglerVitesseVaisseau.md)
