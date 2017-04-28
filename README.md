@@ -74,9 +74,10 @@ Ce mini-projet est découpé en plusieurs **sprints** :
 	- [Rapide Analyse du problème](enonces/SpaceInvaders_S0_QuickDesignSession.md) 
 - [Sprint 1 : Déplacer le vaisseau dans l'espace de jeu](enonces/SpaceInvaders_S1_DeplacerVaisseau.md)
 - [Sprint 2 : Dimensionner le vaisseau](enonces/SpaceInvaders_S2_DimensionnerVaisseau.md)
+- [Spike : Prise en main et intégration d'un moteur graphique](enonces/SpaceInvaders_Spike_MoteurGraphique.md)
 - les autres sprints (à venir)
 
-[Spike : Prise en main et intégration d'un moteur graphique](enonces/SpaceInvaders_Spike_MoteurGraphique.md)
+
 
 Les deux premiers sprints sont écrits sous la forme de tutoriel et sont *extrêmement* détaillés : vous serez guidés pas à pas afin de vous plonger dans la démarche TDD et apprendre peu à peu à prendre en main votre IDE :smile:
 
@@ -105,8 +106,9 @@ Ce mini-projet est en relation avec les enseignements suivants :
 - Cours : [Sensibilisation aux bonnes pratiques de la programmation (qualité logicielle)](https://github.com/iblasquez/enseignement-iut-m2104/blob/master/slides/8_QualiteLogicielle_CleanCode.pdf)
 - Présentation : [Coding Dojo : une aide à la pratique du TDD](http://iblasquez.github.io/presentation_TDD_CodingDojo)
 - Atelier TDDlego : [Sensibilisation aux bonnes pratiques techniques du Software Craftsmanship : Lego® à la rescousse !](https://github.com/iblasquez/atelier-bonnes-pratiques-tdd-lego)
-- Tutoriel autour de [l'exemple *simplifié* du premier chapitre du livre Refactoring, Improving the Design of Existing Code de Martin Fowler](https://github.com/iblasquez/Refactoring_PremierExempleFowler)
+- Et plus généralement [tous les enseignements du module de conception (M2104)](https://github.com/iblasquez/enseignement-iut-m2104-conception) 
 
+<!-- Tutoriel autour de [l'exemple *simplifié* du premier chapitre du livre Refactoring, Improving the Design of Existing Code de Martin Fowler](https://github.com/iblasquez/Refactoring_PremierExempleFowler) -->
 <!-- Les références sont disponibles [ici](SpaceInvaders_References.md) -->
 
 
