@@ -75,7 +75,7 @@ Ce mini-projet est découpé en plusieurs **sprints** :
 - [Sprint 1 : Déplacer le vaisseau dans l'espace de jeu](enonces/SpaceInvaders_S1_DeplacerVaisseau.md)
 - [Sprint 2 : Dimensionner le vaisseau](enonces/SpaceInvaders_S2_DimensionnerVaisseau.md)
 - [Spike : Prise en main et intégration d'un moteur graphique](enonces/SpaceInvaders_Spike_MoteurGraphique.md)
-- [Sprint 3 : Choisir la vitesse du vaisseau](SpaceInvaders_S3_ChoisirVitesseVaisseau.md)
+- [Sprint 3 : Choisir la vitesse du vaisseau](enonces/SpaceInvaders_S3_ChoisirVitesseVaisseau.md)
 - les autres sprints (à venir)
 
 
