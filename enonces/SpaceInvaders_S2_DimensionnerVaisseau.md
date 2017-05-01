@@ -1404,4 +1404,4 @@ Remarque : Si l'assocation entre les classes `Vaisseau` et `Dimension` et `Posit
  
 ... sinon pour continuez à implémenter les fonctionnalités en TDD et ...
 
-### Continuez par le [Sprint 3 : Pouvoir régler la vitesse du vaisseau](SpaceInvaders_S3_ReglerVitesseVaisseau.md)
+### Continuez par le [Sprint 3 : Choisir la vitesse du vaisseau](SpaceInvaders_S3_ChoisirVitesseVaisseau.md)

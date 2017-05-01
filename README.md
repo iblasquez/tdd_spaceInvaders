@@ -75,11 +75,12 @@ Ce mini-projet est découpé en plusieurs **sprints** :
 - [Sprint 1 : Déplacer le vaisseau dans l'espace de jeu](enonces/SpaceInvaders_S1_DeplacerVaisseau.md)
 - [Sprint 2 : Dimensionner le vaisseau](enonces/SpaceInvaders_S2_DimensionnerVaisseau.md)
 - [Spike : Prise en main et intégration d'un moteur graphique](enonces/SpaceInvaders_Spike_MoteurGraphique.md)
+- [Sprint 3 : Choisir la vitesse du vaisseau](SpaceInvaders_S3_ChoisirVitesseVaisseau.md)
 - les autres sprints (à venir)
 
 
 
-Les deux premiers sprints sont écrits sous la forme de tutoriel et sont *extrêmement* détaillés : vous serez guidés pas à pas afin de vous plonger dans la démarche TDD et apprendre peu à peu à prendre en main votre IDE :smile:
+Les trois premiers sprints sont écrits sous la forme de tutoriel et sont *extrêmement* détaillés : vous serez guidés pas à pas afin de vous plonger dans la démarche TDD et apprendre peu à peu à prendre en main votre IDE :smile:
 
 Au fil des sprints, vous aurez de plus en plus d'autonomie pour développer votre mini-projet qui devra bien sûr respecter au mieux les bonnes pratiques de qualité de code ...
 
@@ -88,7 +89,7 @@ Un sprint un peu particulier (une sorte de [*spike*](http://agiledictionary.com/
 
 Remarque pour ce projet dans le cadre du module M2104 :
 - le *sprint* sera considéré comme une boîte de temps dédié au développement d'un ensemble de fonctionnalités autour d'une thématique commune. Suivant la vitesse à laquelle vous avancerez, plusieurs *sprints* pourront éventuellement être réalisés pendant une séance de TP. Vous *tirerez* ainsi les fonctionnalités au fur et à mesure de vos besoins, chaque binôme avançant à son propre rythme.    
-- la séance consacrée à la mise en place du moteur graphique sera réalisée pendant une séance de TD : soyez patient, et continuez tranquillement les sprints en attendant de mettre en place ce rendu visuel ;-)
+- la séance consacrée à la mise en place du moteur graphique sera réalisée après le sprint 2 : soyez patient, et continuez tranquillement les sprints en attendant de mettre en place ce rendu visuel ;-)
 
 
 Have fun !
