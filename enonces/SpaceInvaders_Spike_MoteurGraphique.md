@@ -290,6 +290,8 @@ Lors de votre commit, vous devez :
 
 Développer entièrement un jeu vidéo *from scratch* n'est pas si simple...
 
+Une petite vidéo (15 minutes) :[Développer un jeu vidéo quand on n’y connait rien en développement de jeux vidéo (David Wurste)](https://www.youtube.com/watch?v=4X337M8kU8Q) 
+
 Pour en savoir un peu plus, jetez à l'occasion un petit coup d'oeil sur le site de [Vincent Thomas ](https://members.loria.fr/VThomas) et plus particulièrement dans la rubrique [Tutoriel de Jeux Video en Java](https://members.loria.fr/VThomas/mediation/JV_IUT_2016/). 
 <!-- D'autres références dont également disponibles dans la [page Références](../SpaceInVaders_References.md) de ce dépôt. -->
 
