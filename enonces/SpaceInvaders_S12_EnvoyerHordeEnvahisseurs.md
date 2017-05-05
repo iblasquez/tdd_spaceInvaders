@@ -23,4 +23,4 @@ Dans ce sprint, vous devrez donc :
 **A vous de jouer !!!**
 
 
-### Continuez par le [Sprint 13 & co : Toute amélioration possible pour réaliser le Space Invader de vos rêves](SpaceInvaders_S12_SpaceInvadersDeReve.md)
+### Continuez par le [Sprint 13 & co : Toute amélioration possible pour réaliser le Space Invader de vos rêves](SpaceInvaders_S13_SpaceInvadersDeReve.md)

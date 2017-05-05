@@ -103,9 +103,9 @@ Vers un Space Invaders plus *classique* (Améliorations du MVP)**
 - [Sprint 12 : Envoyer une *horde* d'envahisseurs](enonces/SpaceInvaders_S12_EnvoyerHordeEnvahisseurs.md)   
 
 **Objectif n° 3 : 
-Le Space Invaders de vos rêves : smile:**
+Le Space Invaders de vos rêves :smile:**
 
-- [Sprint 13 & co : Toute amélioration possible pour réaliser le Space Invader de vos rêves](SpaceInvaders_S13_SpaceInvadersDeReve.md)
+- [Sprint 13 & co : Toute amélioration possible pour réaliser le Space Invader de vos rêves](enonces/SpaceInvaders_S13_SpaceInvadersDeReve.md)
 
 
 Les quatre premiers sprints sont écrits sous la forme de tutoriel et sont *extrêmement* détaillés : vous serez guidés pas à pas afin de vous plonger dans la démarche TDD et apprendre peu à peu à prendre en main votre IDE :smile:
