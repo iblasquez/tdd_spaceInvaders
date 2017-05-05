@@ -2,8 +2,16 @@
 
 **L'objectif** de ce mini-projet est de développer un jeu de **space invaders** en **TDD**.
 
+Dans ce README, vous trouverez les rubriques suivantes :
 
-## A propos du jeu *Space Invaders*
+- [A propos du jeu *Space Invaders*](#aProposSpaceInvaders)   
+- [A propos du TDD (*T*est *D*riven *D*evelopment)](#aProposTDD)
+- [Organisation du mini-projet (accès aux différents sprints)](#organisation)
+- [Références](#references) 
+- [Commentaires, remarques et suggestions](#commentaires)  
+- [Licence](#licence)
+
+## A propos du jeu *Space Invaders* <a id="aProposSpaceInvaders"></a>
 
 Space Invader est un **jeu de tir spatial** (*shoot'em up*).
 
@@ -41,7 +49,7 @@ Sources : images extraites de [Wikipédia](https://fr.wikipedia.org/wiki/Space_I
 
 
 
-## A propos du TDD (*T*est *D*riven *D*evelopment)
+## A propos du TDD (*T*est *D*riven *D*evelopment) <a id="aProposTDD"></a>
 
 Le ***développement dirigé par les tests*** (**T**est **D**riven **D**evelopment ou **TDD**) est une approche itérative et incrémentale de codage piloté par les tests unitaires. Un cycle de développement TDD se compose de trois étapes : 
 
@@ -65,9 +73,13 @@ Le ***développement dirigé par les tests*** (**T**est **D**riven **D**evelopme
 Remarque : Une présentation rapide du TDD est disponible [ici](http://iblasquez.github.io/presentation_TDD_CodingDojo)
 
 
-## Organisation du mini-projet
+## Organisation du mini-projet <a id="organisation"></a>
 
-Ce mini-projet est découpé en plusieurs **sprints** :
+Ce mini-projet est découpé en plusieurs **sprints** regroupés en plusieurs objectifs :
+
+
+**Objectif n° 1 :  
+Un Space Invaders *minimum*  : un vaisseau, un missile, un envahisseur (MVP)**
 
 - Sprint 0 : 
 	- [Installation du socle technique](enonces/SpaceInvaders_S0_SocleTechnique.md)
@@ -77,11 +89,26 @@ Ce mini-projet est découpé en plusieurs **sprints** :
 - [Spike : Prise en main et intégration d'un moteur graphique](enonces/SpaceInvaders_Spike_MoteurGraphique.md)
 - [Sprint 3 : Choisir la vitesse du vaisseau](enonces/SpaceInvaders_S3_ChoisirVitesseVaisseau.md)
 - [Sprint 4 : Tirer un missile depuis le vaisseau](enonces/SpaceInvaders_S4_TirerMissileDepuisVaisseau.md)
-- les autres sprints (à venir)
+- [Sprint 5 : Ajouter un envahisseur dans le jeu](enonces/SpaceInvaders_S5_Envahisseur.md)
+- [Sprint 6 : Détecter une collision entre deux sprites](enonces/SpaceInvaders_S6_DetecterCollision.md)
+- [Sprint 7 : Terminer la partie](enonces/SpaceInvaders_S7_TerminerPartie.md)
+
+**Objectif n° 2 :  
+Vers un Space Invaders plus *classique* (Améliorations du MVP)**
+  
+- [Sprint 8 : Permettre au vaisseau de tirer plusieurs missiles](enonces/SpaceInvaders_S8_TirerPlusieursMissiles.md)   
+- [Sprint 9 : Envoyer une *ligne* d'envahisseurs](enonces/SpaceInvaders_S9_EnvoyerLigneEnvahisseurs.md)  
+- [Sprint 10 : Gérer un score](enonces/SpaceInvaders_S10_GererScore.md) 
+- [Sprint 11 : Tirer un missile depuis un envahisseur de manière aléatoire](enonces/SpaceInvaders_S11_TirerMissileDepuisEnvahisseur.md)
+- [Sprint 12 : Envoyer une *horde* d'envahisseurs](enonces/SpaceInvaders_S12_EnvoyerHordeEnvahisseurs.md)   
+
+**Objectif n° 3 : 
+Le Space Invaders de vos rêves : smile:**
+
+- [Sprint 13 & co : Toute amélioration possible pour réaliser le Space Invader de vos rêves](SpaceInvaders_S13_SpaceInvadersDeReve.md)
 
 
-
-Les trois premiers sprints sont écrits sous la forme de tutoriel et sont *extrêmement* détaillés : vous serez guidés pas à pas afin de vous plonger dans la démarche TDD et apprendre peu à peu à prendre en main votre IDE :smile:
+Les quatre premiers sprints sont écrits sous la forme de tutoriel et sont *extrêmement* détaillés : vous serez guidés pas à pas afin de vous plonger dans la démarche TDD et apprendre peu à peu à prendre en main votre IDE :smile:
 
 Au fil des sprints, vous aurez de plus en plus d'autonomie pour développer votre mini-projet qui devra bien sûr respecter au mieux les bonnes pratiques de qualité de code ...
 
@@ -90,7 +117,8 @@ Un sprint un peu particulier (une sorte de [*spike*](http://agiledictionary.com/
 
 Remarque pour ce projet dans le cadre du module M2104 :
 - le *sprint* sera considéré comme une boîte de temps dédié au développement d'un ensemble de fonctionnalités autour d'une thématique commune. Suivant la vitesse à laquelle vous avancerez, plusieurs *sprints* pourront éventuellement être réalisés pendant une séance de TP. Vous *tirerez* ainsi les fonctionnalités au fur et à mesure de vos besoins, chaque binôme avançant à son propre rythme.    
-- la séance consacrée à la mise en place du moteur graphique sera réalisée après le sprint 2 : soyez patient, et continuez tranquillement les sprints en attendant de mettre en place ce rendu visuel ;-)
+- la séance consacrée à la mise en place du moteur graphique sera réalisée après le sprint 2 : soyez patient, et continuez tranquillement les sprints en attendant de mettre en place ce rendu visuel ;-)  
+- Pour le module M2104, l'objectif n°1 est demandé.
 
 
 Have fun !
@@ -100,7 +128,7 @@ Have fun !
 Nous commencerons donc ce mini-projet par l'installation du socle technique : c'est par [ici](enonces/SpaceInvaders_S0_SocleTechnique.md).
 
 
-## Références
+## Références <a id="references"></a>
 
 Ce mini-projet est en relation avec les enseignements suivants :
 
@@ -114,14 +142,14 @@ Ce mini-projet est en relation avec les enseignements suivants :
 <!-- Les références sont disponibles [ici](SpaceInvaders_References.md) -->
 
 
-## Commentaires, remarques et suggestions
-Pour les discussions, c'est par là : https://github.com/iblasquez/tdd_spaceInvaders/issues  
-Pour les propositions de contenu, de modification par ici : https://github.com/iblasquez/tdd_spaceInvaders/pulls
+## Commentaires, remarques et suggestions <a id="commentaires"></a>
+Pour les discussions, c'est par là : [https://github.com/iblasquez/tdd_spaceInvaders/issues](https://github.com/iblasquez/tdd_spaceInvaders/issues)  
+Pour les propositions de contenu, de modification par ici : [https://github.com/iblasquez/tdd_spaceInvaders/pulls](https://github.com/iblasquez/tdd_spaceInvaders/pulls)
 
 Et bien sûr, n'hésitez pas à personnaliser vos messages avec des [emojis](http://www.webpagefx.com/tools/emoji-cheat-sheet/) :smile:
 
 
-## Licence
+## Licence <a id="licence"></a>
 Tous les documents de ce dépôt sont placés sous licence CC BY-NC-SA :  [Creative Commons
 Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
