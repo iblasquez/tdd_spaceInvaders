@@ -1038,5 +1038,5 @@ Le commit pourrait refléter les changements apportés au travers du message sui
 <!--Remarque : Si vous le souhaitez, vous pouvez tagger ce dernier commit `XX` avec un message de tag du genre `xxxxx`.-->
 <!--Refactorer Sprite de manière à avoir une seule méthode deplacer (qui regroupe les 2 instructions : modification des abscisses et des ordonnees qui pourraient être paramétrées avec une Direction à deux attributs : sensX et sensY-->
 
-### Continuez par le [Sprint 5 : Ajouter un envahisseur dans le jeu](enonces/SpaceInvaders_S5_Envahisseur.md)
+### Continuez par le [Sprint 5 : Ajouter un envahisseur dans le jeu(SpaceInvaders_S5_Envahisseur.md)
 
