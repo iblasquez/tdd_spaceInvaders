@@ -132,7 +132,7 @@ Peut-être bien :
 Ce constructeur peut facilement être généré à partir de l'IDE :
 
 * Placez-vous dans la classe `Sprite` juste en dessous de la déclaration des attributs.  
-* A l'aide de l'IDE, appelez le menu `Refactor -> Generate Constructor using Field` :
+* A l'aide de l'IDE, appelez le menu `Source -> Generate Constructor using Field` :
 	* vérifiez que les 3 constructeurs sont bien cochés et sont dans l'ordre suivant : `dimension`,  `origine` et `vitesse` : si ce n'est pas le cas, jouez avec les boutons `Up` et `Down`.
 	* et cliquez sur `OK` 
 
@@ -263,9 +263,9 @@ Commençons par la méthode `tirerUnMissile` de la classe `SpaceInvaders` et pou
 
 ### 1. Ecrire un premier un test (cas *normal* de `tirerUnMissile`)
 
-Ce premier test va permettre d'illustrer le comportement *normal* de `tirerUnMissile`, à savoir obtenir un missile bien positionné au milieu du vaisseau (avec par exemple un missile de longueur impaire qui tire un missile de longueur impaire).
+Ce premier test va permettre d'illustrer le comportement *normal* de `tirerUnMissile`, à savoir obtenir un missile bien positionné au milieu du vaisseau (avec par exemple un vaisseau de longueur impaire qui tire un missile de longueur impaire).
  
-Nous allons examiner une à une les trois étapes du test (*Arrange*, *Assert*, *Assert*) pour écrire correctement ce test et faire des choix de conceptions quant à la signature de cette méthode.
+Nous allons examiner une à une les trois étapes du test (*Arrange*, *Act*, *Assert*) pour écrire correctement ce test et faire des choix de conceptions quant à la signature de cette méthode.
 
 * **Etape Arrange** : Tout d'abord, comme tous les tests précédemment écrits, il est nécessaire de disposer d'un espace de jeu et d'un vaisseau. 
 Comme *contexte* de ce test, nous reprendrons valeurs utilisées précédemment, avec un vaisseau un peu plus grand, cependant, pour permettre de *bien* positionner le missile, c-a-d :    
@@ -383,7 +383,7 @@ Et corrigez les erreurs de compilation en :
 
 * créant automatiquement la méthode `tirerUnMissile` de la classe `Vaisseau`
 
-* ... et tant que vous y êtes... en modifiant la méthode `recupererMarqueDeLaPosition` pour pouvoir afficher la `MARQUE_VAISSEAU` :
+* ... et tant que vous y êtes... en modifiant la méthode `recupererMarqueDeLaPosition` pour pouvoir afficher la `MARQUE_MISSILE` :
 
 ```JAVA
 
@@ -488,7 +488,6 @@ Illustrons à l'aide d'exemples le comportement de la règle de calcul implémen
     
 ```
 
-- **Exemple n°4 :si vaisseau de dimension impaire et missile de dimension paire** (petit décalage à gauche)
 
 ```JAVA
 
@@ -736,7 +735,7 @@ où `HAUT`, `BAS`, `GAUCHE` et `DROITE` représente les directions habituellemen
 
 Et comme le repère de l'espace jeu a un axe des Y inversé c-a-d :  
 - **`HAUT_ECRAN`** indique que les ordonnées doivent être décrémentées (**`-1`**) pour atteindre le haut de l'écran si on considère que l'on se déplace dans le *repère de l'espace jeu* (différence faite en haut de l'écran qui est bien en *haut* et haut de l'espace jeu qui est en *bas* puisque l'axe des Y est vers le bas).   
-- **`BAS_ECRAN`** indique que les ordonnées doivent être décrémentées (**`-1`**) pour atteindre le haut de l'écran si on considère que l'on se déplace dans le *repère de l'espace jeu*.
+- **`BAS_ECRAN`** indique que les ordonnées doivent être incrémentées (**`+1`**) pour atteindre le bas de l'écran si on considère que l'on se déplace dans le *repère de l'espace jeu*.
 La **`GAUCHE`** et la **`DROITE`** restent quant à elles inchangées.  
 
 Remarque : Vous vous dites peut être qu'on aurait juste pu déclarer de nouvelles constantes constantes dans la classe `Constante`... mais dans ce cas là la signature de la méthode aurait comporté un paramètre d'entrée de type `int`. Pour rester le plus *orienté Objet* possible, un type `Direction` est plus approprié.
