@@ -488,6 +488,7 @@ Illustrons à l'aide d'exemples le comportement de la règle de calcul implémen
     
 ```
 
+- **Exemple n°4 :si vaisseau de dimension paire et missile de dimension paire** (pas de décalage)
 
 ```JAVA
 
