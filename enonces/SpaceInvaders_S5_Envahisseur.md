@@ -1,10 +1,10 @@
-# Space Invaders - Sprint 5: Ajouter un envahisseur dans le jeu
+# Space Invaders - Fonctionnalité n°5: Ajouter un envahisseur dans le jeu
 
-**L'objectif** de ce sprint est d' **ajouter un envahisseur dans le jeu** *afin de* donner un peu plus d'interactivité au jeu.
+**L'objectif** de cette fonctionnalité est d' **ajouter un envahisseur dans le jeu** *afin de* donner un peu plus d'interactivité au jeu.
 
 Dans ce sprint, vous devrez donc :  
 	- créer un envahisseur à l'initialisation du jeu (pour l'instant le jeu ne comportera qu'un seul envahisseur)  
-	- faire en sorte que le jeu gère automatiquement le déplacement automatique de cet envhaisseur (uniquement des allers-retours de droite à gauche pour ce sprint)  
+	- faire en sorte que le jeu gère automatiquement le déplacement automatique de cet envahisseur (uniquement des allers-retours de droite à gauche pour ce sprint)  
 
 Conseil : Peut-être sera-t-il judicieux de mémoriser le *sens de déplacement* de l'envahisseur pour savoir si son prochain déplacement doit se faire la droite ou vers la gauche :smile:
 
@@ -33,4 +33,4 @@ Lorsque vous effectuerez le nuage de mots, vous le réaliserez dorénavant sur c
 **A vous de jouer !!!**
 
 
-### Continuez par le [Sprint 6 : Détecter une collision entre deux sprites](SpaceInvaders_S6_DetecterCollision.md)
+### Continuez par la [fonctionnalité n°6 : Détecter une collision entre deux sprites](SpaceInvaders_S6_DetecterCollision.md)

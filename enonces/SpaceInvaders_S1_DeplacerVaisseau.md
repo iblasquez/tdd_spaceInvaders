@@ -1,35 +1,35 @@
-# Space Invaders - Sprint 1 : Déplacer un vaisseau dans l'espace de Jeu
+# Space Invaders - Fonctionnalité n°1 : Déplacer un vaisseau dans l'espace de Jeu
 
-**L'objectif** de ce premier **S**print est de pouvoir **déplacer un vaisseau dans l'espace de jeu**.
+**L'objectif** de cette première *grosse* fonctionnalité est de pouvoir **déplacer un vaisseau dans l'espace de jeu**.
 
-Pour réaliser cet objectif, d'après notre rapide analyse, nous devons implémenter les fonctionnalités suivantes :  
+Pour réaliser cet objectif, d'après notre rapide analyse, nous devons implémenter les *stories* suivantes (considérez pour le moment que les *stories* sont des fonctionnalités de granularité plus fine) :  
 - [créer un espace de jeu](#creerEspaceJeu)  
 - [positionner un nouveau vaisseau dans l'espace de jeu](#positionnerVaisseau)  
 - [déplacer le vaisseau vers la droite dans l'espace de jeu](#déplacerVaisseauDroite)    
 - [déplacer le vaisseau vers la gauche dans l'espace de jeu](#déplacerVaisseauGauche)  
    
-La figure suivante représente de manière plus visuelle la liste des fonctionnalités précédentes, celles que nous prévoyons de développer durant ce sprint :  c'est le *backlog* de notre sprint.    
+La figure suivante représente de manière plus visuelle la liste des stories précédentes, celles que nous prévoyons de développer pour cette première fonctionnalité :  c'est un *backlog* (une liste de choses à faire...)   
 
 ![Sprint Backlog](images/spaceinvaders_s1.png)
 
 
-*Remarque :* *[**Backlog**](http://referentiel.institut-agile.fr/backlog.html) est un terme agile utilisé pour désigner une liste de fonctionnalités, de tâches jugées nécessaires et suffisantes pour la réalisation satisfaisante du projet.* Ce backlog a été réalisé avec [cardboardit](https://cardboardit.com/).
+*Remarque :* *[**Backlog**](http://referentiel.institut-agile.fr/backlog.html) est un terme agile utilisé pour désigner une liste de fonctionnalités/stories, de tâches jugées nécessaires et suffisantes pour la réalisation satisfaisante du projet.* Ce backlog a été réalisé avec [cardboardit](https://cardboardit.com/).
 
-*Dans ce sprint, vous allez être guidé pas à pas pour vous familiariser avec l'approche TDD. Au fil des sprints, vous aurez de plus en plus d'autonomie pour développer votre mini-projet*
+*Dans ce sprint, vous allez être guidé pas à pas pour vous familiariser avec l'approche TDD. Au fil des fonctionnalités, vous aurez de plus en plus d'autonomie pour développer votre mini-projet*
 
 
-## Fonctionnalité n°1 : Créer un espace de jeu <a id="creerEspaceJeu"></a>
+## Story n°1 : Créer un espace de jeu <a id="creerEspaceJeu"></a>
 
-### 1. Le(s) critère(s) d'acceptance de la fonctionnalité
+### 1. Le(s) critère(s) d'acceptance de la story
 
-Pour chaque fonctionnalité, vous devrez commencer par rechercher et lister les critères qui permettront de vérifier que la fonctionnalité réponde correctement aux besoins qu'elle est censée couvrir (cas normaux et cas particuliers).  
+Pour chaque story, vous devrez commencer par rechercher et lister les critères qui permettront de vérifier que la story réponde correctement aux besoins qu'elle est censée couvrir (cas normaux et cas particuliers).  
 Ces critères sont appelés des **critères d'acceptance.**
 
-Par exemple, **un critere d'acceptance** pour la fonctionnalité **créer un espace jeu** est de proposer, une fois la fonctionnalité exécutée : **un espace de jeu vide aux dimensions données (2D)**. C'est d'ailleurs le seul critère que nous retiendrons pour cette fonctionnalité.
+Par exemple, **un critere d'acceptance** pour la story **créer un espace jeu** est de proposer, une fois la story exécutée : **un espace de jeu vide aux dimensions données (2D)**. C'est d'ailleurs le seul critère que nous retiendrons pour cette story.
 
 Rechercher et lister les critères d'acceptance nous permettra :  
 - d'une part, d'écrire les tests plus facilement  
-- d'autre part, de valider la fonctionnalité c-a-d de déterminer si la fonctionnalité est correctement implémentée et *finie* : dans notre mini-projet, ce sera le cas, dès lors que tous les critères d'acceptance seront pris en compte dans l'implémentation (se retrouvant ainsi dans les tests :simple_smile).
+- d'autre part, de valider la story c-a-d de déterminer si la story est correctement implémentée et *finie* : dans notre mini-projet, ce sera le cas, dès lors que tous les critères d'acceptance seront pris en compte dans l'implémentation (se retrouvant ainsi dans les tests :simple_smile).
 
 Une fois, la liste des critères d'acceptance établie, il est temps de se lancer dans le développement.
 
@@ -213,18 +213,18 @@ Comme le dit Martin Fowler :
 **Une fois, le refactoring terminé et les tests relancés AU VERT, vous pouvez vous lancer dans une nouvelle itération.    
 Chaque itération commence par un test qui échoue c-a-d qu'un test devra être écrit uniquement s'il apporte un nouveau comportement au système. En fin d'itération, la question à se poser est donc *Quel est le test suivant?***
 
-Nous considérons que pour cette première fonctionnalité le test écrit précédemment permet de *bien* vérifier la fonctionnalité et que cette fonctionnalité est désormais *terminée*.  
-Nous passons donc maintenant à la deuxième fonctionnalité de notre backlog à savoir : **positionner un nouveau vaisseau dans l'espace de jeu** et le prochain test à écrire sera donc en lien avec cette nouvelle fonctionnalité. 
+Nous considérons que pour cette première story le test écrit précédemment permet de *bien* vérifier la story et que cette story est désormais *terminée*.  
+Nous passons donc maintenant à la deuxième story de notre backlog à savoir : **positionner un nouveau vaisseau dans l'espace de jeu** et le prochain test à écrire sera donc en lien avec cette nouvelle story. 
 
 
-***Remarque : Votre fonctionnalité étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version*** :  
-- avec un message de commit qui reprend le but de la fonctionnalité, par exemple ***créer un espace de jeu***    
+***Remarque : Votre story étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version*** :  
+- avec un message de commit qui reprend le but de la story, par exemple ***créer un espace de jeu***    
 - en prenant bien soin AVANT de cliquer sur le bouton **`Commit`** de cocher le `Status` des fichiers **`SpaceInvaders.java`** et **`SpaceInvadersTest.java`** (et uniquement ces deux fichiers) afin de les ajouter à l'**Index** et donc de les intégrer au commit !  
 Vérifiez une fois le commit effectué que ces deux fichiers sont bien précédés d'une icône en forme de **cylindre orange**, c-a-d qu'ils sont désormais bien soumis au contrôle du gestionnaire de version.  
 
-## Fonctionnalité n°2 : Positionner un nouveau vaisseau dans l'espace de jeu <a id="positionnerVaisseau"></a>
+## Story n°2 : Positionner un nouveau vaisseau dans l'espace de jeu <a id="positionnerVaisseau"></a>
 
-### Les critères d'acceptance de la fonctionnalité :
+### Les critères d'acceptance de la story :
 
 * Un nouveau vaisseau est créé
 * Le vaisseau est positionné aux coordonnées transmises
@@ -250,7 +250,7 @@ Si, plus tard, il juge qu'il est nécessaire de donner une dimension au vaisseau
 
 ##### 1. Commençons par **écrire un test** ...
 
-Le premier test que nous choisissons d'écrire est celui qui illustre le comportement *normal* de la fonctionnalité c-a-d que le vaisseau devrait bien être positionné aux coordonnées *x* et *y* transmises puisque ces coordonnées se situent bien dans l'espace jeu.
+Le premier test que nous choisissons d'écrire est celui qui illustre le comportement *normal* de la story c-a-d que le vaisseau devrait bien être positionné aux coordonnées *x* et *y* transmises puisque ces coordonnées se situent bien dans l'espace jeu.
 
 Arbitrairement, nous choisissons d'écrire notre test à l'aide des données suivantes :  
 - un jeu Space Invader de longueur 15 et de hauteur de 10   
@@ -615,7 +615,7 @@ Un aide mémoire donnant une correspondance entre des *code smells* et des prati
 Mais revenons à la conception de notre application et jetons un petit coup d'oeil au diagramme de classes suivant qui reflète l'état actuel de notre code :  
 Rappel : Pour générer le diagramme de classes de votre projet, utilisez sous Eclipse [Object Aid](http://www.objectaid.com/) UML Explorer (un tutoriel est disponible [ici](https://github.com/iblasquez/tuto_ModelisationUML/tree/master/ObjectAid)).
 
-![Diagramme de classes Sprint 1 Fonctionnalité 2 après nombres magiques](images/DiagClasses_S1_F2_1.png)
+![Diagramme de classes Fonctionnalité 1 story 2 après nombres magiques](images/DiagClasses_S1_F2_1.png)
 
 
 
@@ -640,7 +640,7 @@ Et bien sûr pour que le code compile, il faut rendre `public` la méthode `recu
 
 Et voilà où le refactoring nous a mené...
 
-![Diagramme de classes Sprint 1 Fonctionnalité 2 après recuperer dans chaine ASCCI](images/DiagClasses_S1_F2_2.png)
+![Diagramme de classes Fonctionnalité 1 Story 2 après recuperer dans chaine ASCCI](images/DiagClasses_S1_F2_2.png)
 
 Le diagramme de classes précédent illustre l'état de la conception de notre système à l'issue de cette itération (jetez un petit coup d'oeil sur votre fichier `.ucls` si vous utilisez Object Aid UML Explorer afin de vérifier que vous avez bien le même diagramme :smile: )
 
@@ -992,17 +992,17 @@ Pour procéder à la mise en place de `@Before` vous devez donc :
 
 
 Mais **Quel est donc le prochain test  à écrire ?**   
-Il semblerait que nous ayons fait le tour pour le moment de la fonctionnalité *Positionner un nouveau vaisseau dans l'espace de jeu*.  
+Il semblerait que nous ayons fait le tour pour le moment de la story *Positionner un nouveau vaisseau dans l'espace de jeu*.  
 Maintenant que le vaisseau est en place dans notre espace de jeu, nous aimerions bien pouvoir jouer avec et donc les prochains tests vont concernés ce qui tourne autour du déplacement du vaisseau dans l'espace jeu, et si pour commencer on essayait de **déplacer le vaisseau vers la droite dans l'espace jeu**.
 
 
-***Remarque : Votre fonctionnalité étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version*** :  
-- avec un message de commit qui reprend le but de la fonctionnalité (***positionner un nouveau vaisseau***)   
+***Remarque : Votre story étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version*** :  
+- avec un message de commit qui reprend le but de la story (***positionner un nouveau vaisseau***)   
 - en prenant bien soin AVANT de cliquer sur le bouton **`Commit`** de cocher en plus le `Status` des deux nouveaux fichiers **`Vaisseau.java`** et **`HorsEspaceJeuException`**. Vérifiez une fois le commit effectué que ces deux fichiers sont bien précédés d'une icône en forme de **cylindre orange**.
 
-## Fonctionnalité n°3 : Déplacer le vaisseau vers la droite dans l'espace de jeu <a id="déplacerVaisseauDroite"></a>
+## Story n°3 : Déplacer le vaisseau vers la droite dans l'espace de jeu <a id="déplacerVaisseauDroite"></a>
 
-### Les critères d'acceptance de la fonctionnalité :
+### Les critères d'acceptance de la story :
 
 * Le vaisseau se déplace d'un pas vers la droite 
 * Si le vaisseau se trouve sur la bordure droite de l'espace de jeu, le vaisseau doit rester immobile (aucun déplacement, aucune exception levée : le vaisseau reste juste à sa position actuelle).
@@ -1217,15 +1217,15 @@ Pour améliorer la lisibilité de ce code , il est possible de renommer la méth
 
 
 Mais **Quel est donc le prochain test  à écrire ?**   
-Il semblerait que nous ayons fait le tour pour le moment de la fonctionnalité qui permet de *déplacer le vaisseau vers la droite dans l'espace jeu*.  
-Il ne reste donc plus maintenant qu'à s'intéresser à la fonctionnalité qui permet de **déplacer le vaisseau vers la gauche dans l'espace jeu**.
+Il semblerait que nous ayons fait le tour pour le moment de la story qui permet de *déplacer le vaisseau vers la droite dans l'espace jeu*.  
+Il ne reste donc plus maintenant qu'à s'intéresser à la story qui permet de **déplacer le vaisseau vers la gauche dans l'espace jeu**.
 
 
-***Remarque : Votre fonctionnalité (déplacer le vaisseau vers la droite) étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version !***
+***Remarque : Votre story (déplacer le vaisseau vers la droite) étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version !***
 
-## Fonctionnalité n°4 : Déplacer le vaisseau vers la  gauche dans l'espace de jeu <a id="déplacerVaisseauGauche"></a>
+## Story n°4 : Déplacer le vaisseau vers la  gauche dans l'espace de jeu <a id="déplacerVaisseauGauche"></a>
 
-### Les critères d'acceptance de la fonctionnalité :
+### Les critères d'acceptance de la story :
 
 * Le vaisseau se déplace d'un pas vers la gauche 
 * Si le vaisseau se trouve sur la bordure gauche de l'espace de jeu, le vaisseau doit rester immobile (aucun déplacement, aucune exception levée : le vaisseau reste juste à sa position actuelle).
@@ -1313,9 +1313,9 @@ Pour savoir si un refactoring doit être réalisé, nous devons rapidement relir
 Qu'en pensez-vous ?
 
 Une fois l'**étape de REFACTORING** terminée, n'oubliez pas de vous poser la question : **Quel est donc le prochain test  à écrire ?**   
-Il semblerait que nous ayons fait le tour pour le moment des fonctionnalités prévues dans le backlog de sprint...
+Il semblerait que nous ayons fait le tour pour le moment des stories prévues dans le backlog de sprint...
 
-***Remarque : Votre fonctionnalité (déplacer le vaisseau vers la gauche étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version !***
+***Remarque : Votre story (déplacer le vaisseau vers la gauche étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version !***
 
 
 ## Un petit coup d'oeil sur la couverture de code ...
@@ -1349,7 +1349,7 @@ Mais lorsque nous utilisons une approche TDD, nous sommes très proche du 100% p
 Pour terminer, jetez un petit coup d'oeil, via Object Aid UML, au fichier (`ucls`) pour visualiser le diagramme de classes de vos classes métiers.
  
 
-![Diagramme de classes Sprint 1 Fonctionnalité 2 après recuperer dans chaine ASCCI](images/DiagClasses_S1_Fin.png)
+![Diagramme de classes Fonctionnalité 1 Story 2 après recuperer dans chaine ASCCI](images/DiagClasses_S1_Fin.png)
 
 
 Le diagramme de classes illustre l'état de la conception de notre système à l'issue de cette itération.
@@ -1382,8 +1382,8 @@ Et parce que des images valent mieux qu'un long discours, jetez un petit coup d'
 
 En ce qui concerne la gestion de version, voici comment vous devrez procédez pour les séances suivantes :
 
-* idéalement un commit doit être effectuée à chaque fois qu'une fonctionnalité est finie
-* idéalement une fonctionnalité devrait être développée dans une branche dédiée et fusionner (merger) dans `master` lorsque la fonctionnalité est terminée de manière à ce que `master` soit toujours fonctionnel (avec des tests AU VERT). Toutefois, dans le cadre du module M2104, nous vous rappelons que pour commencer vous ne travaillerez uniquement sur `master` pour vous permettre de vous familiariser avec le gestionnaire de version.
+* idéalement un commit doit être effectuée à chaque fois qu'une story est finie
+* idéalement une fonctionnalité devrait être développée dans une branche dédiée et fusionner (merger) dans `master` lorsque la story est terminée de manière à ce que `master` soit toujours fonctionnel (avec des tests AU VERT). Toutefois, dans le cadre du module M2104, nous vous rappelons que pour commencer vous ne travaillerez uniquement sur `master` pour vous permettre de vous familiariser avec le gestionnaire de version.
 * A la fin chaque séance, vous devez tager votre dernier commit (contenant du code fonctionnel) et pousser votre historique sur Github.
 
 C'est d'ailleurs ce que vous devez faire maintenant, en vous aidant du tutoriel sur Git disponible [ici](https://github.com/iblasquez/tuto_git/blob/master/egit/git_egit_tutoriel.md) et/ou des instructions suivantes :
@@ -1400,22 +1400,24 @@ Vous pouvez aussi renseigner la partie **`Tag Message`** par exemple avec **`dé
 
 Précédemment, nous avons déjà évoqué le fait que **les tests font office de documentation de votre code...**
 
-Toutefois, dans le cadre du module M2104, vous devrez fournir une fiche reprenant et documentant le travail réalisé pendant la séance de TP. Cette fiche (sorte de rapport de TP) devra être réalisée pour la séance de TP suivante. Elle fera partie d'un rapport écrit sous [Google Drive](https://www.google.com/intl/fr_ALL/drive/) nous allons vous donner le modèle. 
+Toutefois, dans le cadre du module M2104, vous devrez fournir une fiche reprenant et documentant le travail réalisé pendant la séance de TP. Cette fiche (sorte de rapport de TP) devra être réalisée pour la séance de TP suivante. Elle fera partie d'un rapport écrit sous [Google Drive](https://www.google.com/intl/fr_ALL/drive/) qui devra respecter le modèle suivant disponible [ici](http://unil.im/210417). 
 
-Créer un document sous [Google Drive](https://www.google.com/intl/fr_ALL/drive/) que nous nommerez `GXx_SpaceInvader_VosNoms` et inviter votre enseignant de TP à rejoindre ce document (comme cela, vous n'aurez dons pas besoin d'imprimer la fiche à chaque début séance).
+<!--Créer un document sous [Google Drive](https://www.google.com/intl/fr_ALL/drive/) que nous nommerez `GXx_SpaceInvader_VosNoms` et inviter votre enseignant de TP à rejoindre ce document (comme cela, vous n'aurez dons pas besoin d'imprimer la fiche à chaque début séance).-->
 
-Le modèle de ce document est consultable [ici](http://unil.im/210417).  
-Pour vous aider, la première fiche est déjà pré-remplie les fonctionnalités que nous venons d'implémenter dans ce sprint.
+Pour vous aider, la première fiche est déjà pré-remplie les stories que nous venons d'implémenter dans ce sprint.
 
 Dorénavant, vous allez donc rédiger votre rapport de manière itérative et incrémentale en ajoutant une fiche à chaque séance de TP.  
 Ainsi à la fin de chaque sséance, vous devrez :  
 - indiquer le(s) objectif(s) réalisé(s) pendant la séance  
-- lister les fonctionnalités implémentées et leur critères d'acceptance  
+- lister les fonctionnalitées implémentées que vous aurez au préalable découpées en stories.   
+- lister les critères d'acceptance des stories.   
 - modéliser le diagramme de classes de votre application (en reverse-engineering à l'aide d'Object Aid UML par exemple)
 - générer un nuage de mot  
 - mentionner les difficultés que vous avez pu rencontrées au cours du TP (s'il y en a)
 - ajouter toutes remarques ou commentaires que vous jugerez utile
 - compléter le glossaire si nécessaire  
+
+Chaque séance de TP donnera lieu à la rédaction du fiche qui devra être remise à l'enseignant de TP avant le début de la séance suivante. Les modalités de remise de ces fiches sont indiquées dans le document Google Drive qui vous sert de modèle.  
 
 A la fin du module, vous devrez envoyer par mail à votre enseignant de TP : une version PDF de ce document. Durant la dernière séance de TP, vous devrez faire une démonstration de votre projet et montrer votre code à votre enseignant de TP. 
 <!-- lui fournir un JAR de votre application --> 
@@ -1425,13 +1427,13 @@ Nous jugerons bien sûr la qualité de votre code avant la quantité.
 ### Récapitulatif sur la démarche à adopter pendant une séance de TP
 
 Toutes vos séances se dérouleront désormais de la même manière.
-Pour chaque nouvelle fonctionnalité, vous commencerez par établir une liste de critères d'acceptance.   
-Vous implémenterez chaque fonctionnalité en adoptant une démarche TDD (Test Drive Development) c-a-d toujours en écrivant le Test avant le Code et en refactorant aussi souvent que nécessaire pour assurer une certaine qualité de code et rendre le code *plus propre*.  
+Pour chaque nouvelle fonctionnalité, vous commencerez par décomposer cette fonctionnalité en stories. Pour chaque story, vous établirez une liste de critères d'acceptance.   
+Vous implémenterez chaque story en adoptant une démarche TDD (Test Drive Development) c-a-d toujours en écrivant le Test avant le Code et en refactorant aussi souvent que nécessaire pour assurer une certaine qualité de code et rendre le code *plus propre*.  
 Sur barre verte, vous vous poserez donc la question de la qualité de code et de la nécessité de mettre en place une étape de refactoring (responsabilité unique, mauvaises odeurs dans le code, bonnes pratiques respectées,..)  
 Vous n'oublierez pas de commiter et de pousser un code fonctionnel taggé en fin de séance !!!  
 et de rédiger pour la séance suivante la fiche documentant le travail réalisé pendant la séance.
 
-Remarque : La liste des fonctionnalités durant une séance de TP peut varier d'un binôme à l'autre, correspondre à celles d'un sprint ou plus. Il est important que chaque binôme avance à son rythme pendant une séance de TP.
+Remarque : La liste des fonctionnalités/stories implémentées durant une séance de TP peut varier d'un binôme à l'autre. Il est important que chaque binôme avance à son rythme pendant une séance de TP.
 
 
 <!-- ## Code fin de Sprint 1
@@ -1439,4 +1441,4 @@ Remarque : La liste des fonctionnalités durant une séance de TP peut varier d'
 
 
 
-### Continuez par le [Sprint 2 : Dimensionner le vaisseau](SpaceInvaders_S2_DimensionnerVaisseau.md)
+### Continuez par la [fonctionnalité n°2 : Dimensionner le vaisseau](SpaceInvaders_S2_DimensionnerVaisseau.md)

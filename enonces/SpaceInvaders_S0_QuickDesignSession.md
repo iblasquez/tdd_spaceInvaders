@@ -132,4 +132,4 @@ En TDD, la conception est *émergente*, elle évolue donc au fil des tests et de
 
 Allez, let's go !
 
-### Continuez par le [Sprint 1 : Déplacer un vaisseau dans l'espace de Jeu](SpaceInvaders_S1_DeplacerVaisseau.md)
+### Continuez par la [fonctionnalité n°1 : Déplacer un vaisseau dans l'espace de Jeu](SpaceInvaders_S1_DeplacerVaisseau.md)

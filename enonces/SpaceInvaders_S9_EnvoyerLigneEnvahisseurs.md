@@ -1,6 +1,6 @@
-# Space Invaders - Sprint 9 : Envoyer une *ligne* d'envahisseurs
+# Space Invaders - Fonctionnalité n°9 : Envoyer une *ligne* d'envahisseurs
 
-**L'objectif** de ce sprint est d'**envoyer une *ligne* d'envahisseurs** *afin* de donner plus d'attractivité au jeu.
+**L'objectif** de cette fonctionnalité est d'**envoyer une *ligne* d'envahisseurs** *afin* de donner plus d'attractivité au jeu.
 
 Dans ce sprint, vous devrez donc :  
 	- utiliser désormais une `List<Envahisseur> envahisseurs` (à la place d'un seul `Envahisseur` dans votre jeu `SpaceInvaders`)  
@@ -22,4 +22,4 @@ Dans ce sprint, vous devrez donc :
 **A vous de jouer !!!**
 
 
-### Continuez par le [Sprint 10 : Gérer un score](SpaceInvaders_S10_GererScore.md)
+### Continuez par la [fonctionnalité n°10 : Gérer un score](SpaceInvaders_S10_GererScore.md)

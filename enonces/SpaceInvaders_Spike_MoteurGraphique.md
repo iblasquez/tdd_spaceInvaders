@@ -299,4 +299,4 @@ Si vous voulez développez un *vrai* moteur léger pour le développement futur 
 [*LibGDX is a free and open-source game-development application framework written in the Java programming language with some C and C++ components for performance dependent code. It allows for the development of desktop and mobile games by using the same code base. It is cross-platform, supporting Windows, Linux, Mac OS X, Android, iOS, BlackBerry and web browsers with WebGL support.(Wikipédia)*](https://en.wikipedia.org/wiki/LibGDX).
 
 
-### Continuez par le [Sprint 3 : Choisir la vitesse du vaisseau](SpaceInvaders_S3_ChoisirVitesseVaisseau.md)
+### Continuez par la [fonctionnalité n° 3 : Choisir la vitesse du vaisseau](SpaceInvaders_S3_ChoisirVitesseVaisseau.md)

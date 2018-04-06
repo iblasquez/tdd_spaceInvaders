@@ -1,6 +1,6 @@
-# Space Invaders - Sprint 12 : Envoyer une *horde* d'envahisseurs
+# Space Invaders - Fonctionnalité n°12 : Envoyer une *horde* d'envahisseurs
 
-**L'objectif** de ce sprint est  d'**envoyer une *ligne* d'envahisseurs qui tirent aléaoirement et se déplace automatiquement** *afin* de rendre le jeu plus réaliste et proche d'un jeu SpaceInvaders classique.
+**L'objectif** de cette fonctionnalité est  d'**envoyer une *ligne* d'envahisseurs qui tirent aléaoirement et se déplace automatiquement** *afin* de rendre le jeu plus réaliste et proche d'un jeu SpaceInvaders classique.
 
 Dans ce sprint, vous devrez donc :  
 	- créer une *horde* d'envahisseur à l'initialisation du jeu.   
@@ -23,4 +23,4 @@ Dans ce sprint, vous devrez donc :
 **A vous de jouer !!!**
 
 
-### Continuez par le [Sprint 13 & co : Toute amélioration possible pour réaliser le Space Invader de vos rêves](SpaceInvaders_S13_SpaceInvadersDeReve.md)
+### Continuez par les [fonctionnalités n° 13 & co : Toute amélioration possible pour réaliser le Space Invader de vos rêves](SpaceInvaders_S13_SpaceInvadersDeReve.md)

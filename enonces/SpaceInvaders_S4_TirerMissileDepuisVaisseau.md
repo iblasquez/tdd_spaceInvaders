@@ -1,7 +1,7 @@
-# Space Invaders - Sprint 4: Tirer un missile depuis le vaisseau 
+# Space Invaders - Fonctionnalité n°4: Tirer un missile depuis le vaisseau 
 
 
-**L'objectif** de ce sprint est de *pouvoir* **tirer un missile depuis le vaisseau** *afin de*  donner un peu plus d'interactivité au jeu.
+**L'objectif** de cette fonctionnalité est de *pouvoir* **tirer un missile depuis le vaisseau** *afin de*  donner un peu plus d'interactivité au jeu.
 
 <!--[Sprint Backlog](images/spaceinvaders_s4.png)-->
 
@@ -1031,12 +1031,12 @@ Effectuez quelques tests d'acceptance :
 
 ## Committer les changements liés à cette nouvelle fonctionnalité <a id="commit"></a>
 
-**Ce sprint est désormais terminé et la dernière fonctionnalité implémentée a consisté à  faire en sorte que le jeu puisse *déplacer automatiquement le missile*  il est temps de committer les derniers changements dans votre gestionnaire de version !**  
+**Cette fonctionnalité est désormais terminée et la dernière story implémentée a consisté à  faire en sorte que le jeu puisse *déplacer automatiquement le missile*  il est temps de committer les derniers changements dans votre gestionnaire de version !**  
 Ne pas oublier d'ajouter à l'index l'énumération `Direction`.   
 Le commit pourrait refléter les changements apportés au travers du message suivant par exemple : **déplacer automatiquement le missile**.
 
 <!--Remarque : Si vous le souhaitez, vous pouvez tagger ce dernier commit `XX` avec un message de tag du genre `xxxxx`.-->
 <!--Refactorer Sprite de manière à avoir une seule méthode deplacer (qui regroupe les 2 instructions : modification des abscisses et des ordonnees qui pourraient être paramétrées avec une Direction à deux attributs : sensX et sensY-->
 
-### Continuez par le [Sprint 5 : Ajouter un envahisseur dans le jeu](SpaceInvaders_S5_Envahisseur.md)
+### Continuez par la [fonctionnalité n°5 : Ajouter un envahisseur dans le jeu](SpaceInvaders_S5_Envahisseur.md)
 

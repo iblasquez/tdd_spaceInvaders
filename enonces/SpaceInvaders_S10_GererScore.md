@@ -1,6 +1,6 @@
-# Space Invaders - Sprint 10 : Gérer un score
+# Space Invaders - Fonctionnalité n°10 : Gérer un score
 
-**L'objectif** de ce sprint est de **gérer un score** *afin* de donner un peu de défi au jeu.
+**L'objectif** de cette fonctionnalité est de **gérer un score** *afin* de donner un peu de défi au jeu.
 
 Dans ce sprint, vous devrez donc :  
 	- calculer le score et afficher le score (en temps réeel)  
@@ -22,4 +22,4 @@ Conseil : Un espace en haut de l'espace de jeu pourrait par exemple être laiss�
 **A vous de jouer !!!**
 
 
-### Continuez par le [Sprint 11 : Tirer un missile depuis un envahisseur de manière aléatoire](SpaceInvaders_S11_TirerMissileDepuisEnvahisseur.md)
+### Continuez par la [fonctionnalité n°11 : Tirer un missile depuis un envahisseur de manière aléatoire](SpaceInvaders_S11_TirerMissileDepuisEnvahisseur.md)

@@ -1,6 +1,6 @@
-# Space Invaders - Sprint 6: Détecter une collision entre deux sprites
+# Space Invaders - Fonctionnalité n°6: Détecter une collision entre deux sprites
 
-**L'objectif** de ce sprint est de **détecter une collision entre deux sprites**.
+**L'objectif** de cette fonctionnalité est de **détecter une collision entre deux sprites**.
 
 Dans ce sprint, vous devrez donc :  
 	- créer une nouvelle classe `Collision` dans laquelle vous implémenterez une méthode `detecterCollision` qui permettra de détecter si une collision a lieu entre deux `Sprite` 
@@ -29,4 +29,4 @@ Conseil :
 **A vous de jouer !!!**
 
 
-### Continuez par le [Sprint 7 : Terminer la partie](SpaceInvaders_S7_TerminerPartie.md)
+### Continuez par la [fonctionnalité n°7 : Terminer la partie](SpaceInvaders_S7_TerminerPartie.md)

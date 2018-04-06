@@ -75,49 +75,56 @@ Remarque : Une présentation rapide du TDD est disponible [ici](http://iblasquez
 
 ## Organisation du mini-projet <a id="organisation"></a>
 
-Ce mini-projet est découpé en plusieurs **sprints** regroupés en plusieurs objectifs :
+Ce mini-projet est découpé en plusieurs **fonctionnalités** priorisées et regroupées en trois objectifs :
 
 
 **Objectif n° 1 :  
 Un Space Invaders *minimum*  : un vaisseau, un missile, un envahisseur (MVP)**
 
-- Sprint 0 : 
-	- [Installation du socle technique](enonces/SpaceInvaders_S0_SocleTechnique.md)
-	- [Rapide Analyse du problème](enonces/SpaceInvaders_S0_QuickDesignSession.md) 
-- [Sprint 1 : Déplacer le vaisseau dans l'espace de jeu](enonces/SpaceInvaders_S1_DeplacerVaisseau.md)
-- [Sprint 2 : Dimensionner le vaisseau](enonces/SpaceInvaders_S2_DimensionnerVaisseau.md)
-- [Spike : Prise en main et intégration d'un moteur graphique](enonces/SpaceInvaders_Spike_MoteurGraphique.md)
-- [Sprint 3 : Choisir la vitesse du vaisseau](enonces/SpaceInvaders_S3_ChoisirVitesseVaisseau.md)
-- [Sprint 4 : Tirer un missile depuis le vaisseau](enonces/SpaceInvaders_S4_TirerMissileDepuisVaisseau.md)
-- [Sprint 5 : Ajouter un envahisseur dans le jeu](enonces/SpaceInvaders_S5_Envahisseur.md)
-- [Sprint 6 : Détecter une collision entre deux sprites](enonces/SpaceInvaders_S6_DetecterCollision.md)
-- [Sprint 7 : Terminer la partie](enonces/SpaceInvaders_S7_TerminerPartie.md)
+
+- [Fonctionnalité n°1 : Déplacer le vaisseau dans l'espace de jeu](enonces/SpaceInvaders_S1_DeplacerVaisseau.md)
+- [Fonctionnalité n°2 : Dimensionner le vaisseau](enonces/SpaceInvaders_S2_DimensionnerVaisseau.md)
+- [Fonctionnalité n°3 : Choisir la vitesse du vaisseau](enonces/SpaceInvaders_S3_ChoisirVitesseVaisseau.md)
+- [Fonctionnalité n°4 : Tirer un missile depuis le vaisseau](enonces/SpaceInvaders_S4_TirerMissileDepuisVaisseau.md)
+- [Fonctionnalité n°5 : Ajouter un envahisseur dans le jeu](enonces/SpaceInvaders_S5_Envahisseur.md)
+- [Fonctionnalité n°6 : Détecter une collision entre deux sprites](enonces/SpaceInvaders_S6_DetecterCollision.md)
+- [Fonctionnalité n°7 : Terminer la partie](enonces/SpaceInvaders_S7_TerminerPartie.md)
 
 **Objectif n° 2 :  
 Vers un Space Invaders plus *classique* (Améliorations du MVP)**
   
-- [Sprint 8 : Permettre au vaisseau de tirer plusieurs missiles](enonces/SpaceInvaders_S8_TirerPlusieursMissiles.md)   
-- [Sprint 9 : Envoyer une *ligne* d'envahisseurs](enonces/SpaceInvaders_S9_EnvoyerLigneEnvahisseurs.md)  
-- [Sprint 10 : Gérer un score](enonces/SpaceInvaders_S10_GererScore.md) 
-- [Sprint 11 : Tirer un missile depuis un envahisseur de manière aléatoire](enonces/SpaceInvaders_S11_TirerMissileDepuisEnvahisseur.md)
-- [Sprint 12 : Envoyer une *horde* d'envahisseurs](enonces/SpaceInvaders_S12_EnvoyerHordeEnvahisseurs.md)   
+- [Fonctionnalité n°8 : Permettre au vaisseau de tirer plusieurs missiles](enonces/SpaceInvaders_S8_TirerPlusieursMissiles.md)   
+- [Fonctionnalité n°9 : Envoyer une *ligne* d'envahisseurs](enonces/SpaceInvaders_S9_EnvoyerLigneEnvahisseurs.md)  
+- [Fonctionnalité n°10 : Gérer un score](enonces/SpaceInvaders_S10_GererScore.md) 
+- [Fonctionnalité n°11 : Tirer un missile depuis un envahisseur de manière aléatoire](enonces/SpaceInvaders_S11_TirerMissileDepuisEnvahisseur.md)
+- [Fonctionnalité n°12 : Envoyer une *horde* d'envahisseurs](enonces/SpaceInvaders_S12_EnvoyerHordeEnvahisseurs.md)   
 
 **Objectif n° 3 : 
 Le Space Invaders de vos rêves :smile:**
 
-- [Sprint 13 & co : Toute amélioration possible pour réaliser le Space Invader de vos rêves](enonces/SpaceInvaders_S13_SpaceInvadersDeReve.md)
+- [Fonctionnalité n°13 & co : Toute amélioration possible pour réaliser le Space Invader de vos rêves](enonces/SpaceInvaders_S13_SpaceInvadersDeReve.md)
 
 
-Les quatre premiers sprints sont écrits sous la forme de tutoriel et sont *extrêmement* détaillés : vous serez guidés pas à pas afin de vous plonger dans la démarche TDD et apprendre peu à peu à prendre en main votre IDE :smile:
+Les quatre premières fonctionnalités sont écrites sous la forme de tutoriel et sont *extrêmement* détaillées : vous serez guidés pas à pas afin de vous plonger dans la démarche TDD et apprendre peu à peu à prendre en main votre IDE :smile:
 
-Au fil des sprints, vous aurez de plus en plus d'autonomie pour développer votre mini-projet qui devra bien sûr respecter au mieux les bonnes pratiques de qualité de code ...
+Au fil des fonctionnalités, vous aurez de plus en plus d'autonomie pour développer votre mini-projet qui devra bien sûr respecter au mieux les bonnes pratiques de qualité de code ...
 
-Un sprint un peu particulier (une sorte de [*spike*](http://agiledictionary.com/209/spike/)) doit également être ajouté. Il concernera la [mise en place d'un moteur graphique au sein de notre jeu](enonces/SpaceInvaders_MoteurGraphique.md) et sera consacré à la prise en main d'un moteur graphique simplifié et à son intégration au jeu. Idéalement, ce *spike* devrait être réalisée après le sprint 2 lorsque le vaisseau a une dimension. En réalité jusqu'à la livraison, le moteur graphique n'est pas vraiment nécessaire pour le développement de notre application puisque le comportement du jeu est vérifié et validé par les tests !    
+Outre les fonctionnalités, deux autres tâches *techniques* vont être nécessaire pour mener à bien le premier objectif :
+
+- Sprint 0 (selon la terminologie agile) en tout début de projet va permettre :
+ * [Installation du socle technique](enonces/SpaceInvaders_S0_SocleTechnique.md)
+ * [Rapide Analyse du problème](enonces/SpaceInvaders_S0_QuickDesignSession.md)  
+- La [mise en place d'un moteur graphique au sein de notre jeu](enonces/SpaceInvaders_MoteurGraphique.md) sera consacrée à la prise en main d'un moteur graphique simplifié et à son intégration au jeu. Idéalement, cette tâche devrait être réalisée après la fonctionnalité 2 lorsque le vaisseau a une dimension. En réalité jusqu'à la livraison, le moteur graphique n'est pas vraiment nécessaire pour le développement de notre application puisque le comportement du jeu est vérifié et validé par les tests ! 
+
+Une fois l'objectif n°1 terminé (et avant de commencer l'objectif n°2), nous verrons également comment livrer ce projet via la : 
+ 
+- [Création d'un .JAR du projet](enonces/SpaceInvaders_JAR.md)  
 
 
-Remarque pour ce projet dans le cadre du module M2104 :
-- le *sprint* sera considéré comme une boîte de temps dédié au développement d'un ensemble de fonctionnalités autour d'une thématique commune. Suivant la vitesse à laquelle vous avancerez, plusieurs *sprints* pourront éventuellement être réalisés pendant une séance de TP. Vous *tirerez* ainsi les fonctionnalités au fur et à mesure de vos besoins, chaque binôme avançant à son propre rythme.    
-- la séance consacrée à la mise en place du moteur graphique sera réalisée après le sprint 2 : soyez patient, et continuez tranquillement les sprints en attendant de mettre en place ce rendu visuel ;-)  
+
+**Remarque pour ce projet dans le cadre du module M2104 :**  
+- Suivant la vitesse à laquelle vous avancerez, plusieurs *fonctionnalités* pourront être réalisées pendant une séance de TP. Vous *tirerez* ainsi les fonctionnalités au fur et à mesure de vos besoins, chaque binôme avançant à son propre rythme.    
+- La séance consacrée à la mise en place du moteur graphique sera réalisée après La fonctionnalité n°2 : soyez patient, et continuez tranquillement les fonctionnalités en attendant de mettre en place ce rendu visuel ;-)  
 - Pour le module M2104, l'objectif n°1 est demandé.
 
 

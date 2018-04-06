@@ -1,4 +1,4 @@
-# Space Invaders - Sprint 13 & co : Toute amélioration possible pour réaliser le Space Invader de vos rêves
+# Space Invaders - Fonctionnalité n° 13 & co : Toute amélioration possible pour réaliser le Space Invader de vos rêves
 
 Vous pouvez maintenant imaginer le *Space Invaders* de vos rêves :  
 	-  en vous inspirant du site [http://www.classicgaming.cc/classics/space-invaders](http://www.classicgaming.cc/classics/space-invaders)  

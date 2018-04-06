@@ -1,6 +1,6 @@
-# Space Invaders - Sprint 8 : Permettre au vaisseau de tirer plusieurs missiles
+# Space Invaders - Fonctionnalité n°8 : Permettre au vaisseau de tirer plusieurs missiles
 
-**L'objectif** de ce sprint est de **permettre au vaisseau de tirer plusieurs missiles** *afin* de donner plus d'attractivité au jeu.
+**L'objectif** de cette fonctionnalité est de **permettre au vaisseau de tirer plusieurs missiles** *afin* de donner plus d'attractivité au jeu.
 
 Dans ce sprint, vous devrez donc :  
 	- utiliser désormais une `List<Missile> missiles` (à la place d'un seul `Missile` dans votre jeu `SpaceInvaders`)  
@@ -22,4 +22,4 @@ Dans ce sprint, vous devrez donc :
 **A vous de jouer !!!**
 
 
-### Continuez par le [Sprint 9 : Envoyer une *ligne* d'envahisseurs](SpaceInvaders_S9_EnvoyerLigneEnvahisseurs.md)
+### Continuez par la [fonctionnalité n°9 : Envoyer une *ligne* d'envahisseurs](SpaceInvaders_S9_EnvoyerLigneEnvahisseurs.md)

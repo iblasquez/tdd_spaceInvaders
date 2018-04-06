@@ -1,6 +1,6 @@
-# Space Invaders - Sprint 7: Terminer la partie
+# Space Invaders - Fonctionnalité n°7: Terminer la partie
 
-**L'objectif** de ce sprint est de **détecter la fin de la partie**.
+**L'objectif** de cette fonctionnalité est de **détecter la fin de la partie**.
 
 La partie sera terminée lorsqu'une collision sera détectée entre le missile et l'alien. 
 
@@ -19,4 +19,4 @@ La partie sera terminée lorsqu'une collision sera détectée entre le missile e
 **A vous de jouer !!!**
 
 
-### Continuez par le [Sprint 8 : Permettre au vaisseau de tirer plusieurs missiles](SpaceInvaders_S8_TirerPlusieursMissiles.md)
+### Continuez par la [fonctionnalité n°8 : Permettre au vaisseau de tirer plusieurs missiles](SpaceInvaders_S8_TirerPlusieursMissiles.md)

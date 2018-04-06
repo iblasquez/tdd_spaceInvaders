@@ -1,6 +1,6 @@
-# Space Invaders - Sprint 11 : Tirer un missile depuis un envahisseur de manière aléatoire
+# Space Invaders - Fonctionnalité n°11 : Tirer un missile depuis un envahisseur de manière aléatoire
 
-**L'objectif** de ce sprint est de **donner la possibilité à un envahisseur de tirer un missile de manière aléatoire** *afin* de rendre le jeu plus attractif.
+**L'objectif** de cette fonctionnalité est de **donner la possibilité à un envahisseur de tirer un missile de manière aléatoire** *afin* de rendre le jeu plus attractif.
 
 Dans ce sprint, vous devrez donc :  
 	- permettre à un envahisseur de tirer un missile.  
@@ -21,4 +21,4 @@ Dans ce sprint, vous devrez donc :
 
 **A vous de jouer !!!**
 
-### Continuez par le [Sprint 12 : Envoyer une *horde* d'envahisseurs](SpaceInvaders_S12_EnvoyerHordeEnvahisseurs.md)
+### Continuez par la [fonctionnalité n°12 : Envoyer une *horde* d'envahisseurs](SpaceInvaders_S12_EnvoyerHordeEnvahisseurs.md)

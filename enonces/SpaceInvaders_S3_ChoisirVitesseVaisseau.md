@@ -1,7 +1,7 @@
-# Space Invaders - Sprint 3 : Choisir la vitesse du vaisseau
+# Space Invaders - Fonctionnalité n°3 : Choisir la vitesse du vaisseau
 
 
-**L'objectif** de ce sprint est de *pouvoir* **choisir la vitesse du vaisseau** *afin* que le vaisseau puisse se déplacer à une vitesse convenable dans l'application graphique.
+**L'objectif** de cette fonctionnalité est de *pouvoir* **choisir la vitesse du vaisseau** *afin* que le vaisseau puisse se déplacer à une vitesse convenable dans l'application graphique.
 
 <!--[Sprint Backlog](images/spaceinvaders_s3.png)-->
 
@@ -526,9 +526,9 @@ Il ne vous reste plus qu'à lancer le moteur graphique et à faire quelques essa
 
 ## Committer les changements liés à cette nouvelle fonctionnalité <a id="commit"></a>
 
-**Ce sprint est désormais terminé et la fonctionnalité *Choisir la vitesse du vaisseau* est semble-t-elle terminée et fonctionnelle : il est temps de committer les derniers changements dans votre gestionnaire de version !**  
+**La fonctionnalité *Choisir la vitesse du vaisseau* est semble-t-elle terminée et fonctionnelle : il est temps de committer les derniers changements dans votre gestionnaire de version !**  
 Le commit pourrait refléter les changements apportés au travers du message suivant par exemple : **ajout vitesse du vaisseau**.
 
 <!--Remarque : Si vous le souhaitez, vous pouvez tagger ce dernier commit `XX` avec un message de tag du genre `xxxxx`.-->
 
-### Continuez par le [Sprint 4 : Tirer un missile depuis le vaisseau](SpaceInvaders_S4_TirerMissileDepuisVaisseau.md)
+### Continuez par la [fonctionnalité n°4 : Tirer un missile depuis le vaisseau](SpaceInvaders_S4_TirerMissileDepuisVaisseau.md)

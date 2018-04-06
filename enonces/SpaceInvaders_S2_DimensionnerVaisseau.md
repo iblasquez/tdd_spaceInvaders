@@ -1,4 +1,4 @@
-# Space Invaders - Sprint 2 : Dimensionner le vaiseau
+# Space Invaders - Fonctionnalité n°2 : Dimensionner le vaiseau
 
 Actuellement, nous disposons d'un espace de jeu et d'un vaisseau qui sait se déplacer vers la droite ou vers la gauche dans cet espace de jeu ... Il est temps de donner la possibilité au vaisseau de *tirer un missile* c-a-d de créer et positionner un objet missile au dessus de vaisseau. Dans l'état actuel du code, cela donnerait quelque chose de la sorte :
 <img src="images/vaisseauMissile_sansDimension.png" alt="tirer un missile depuis le vaisseau sans dimension" width="100"> ...
@@ -8,12 +8,12 @@ Hum, hum, tout cela n'est pas vraiment réaliste (un missile aussi grand qu'un v
 
 Avant d'ajouter la fonctionnalité *tirer un missile*, il est donc nécessaire de reprendre le code existant afin de rajouter la notion de *dimension* sur le vaisseau (sans casser le comportement existant bien sûr)... Un *petit* refactoring s'impose.
 
-**L'objectif** de ce **S**print est donc de **pouvoir dimensionner le vaisseau** :
+**L'objectif** de cette fonctionnalité est donc de **pouvoir dimensionner le vaisseau** :
 
 ![Sprint Backlog](images/spaceinvaders_s2.png)
 
 
-Pour réaliser cet objectif, d'après notre rapide analyse, nous devons ajouter la *dimension* du vaisseau au code existant en vérifiant que ce nouveau paramètre ne vienne pas perturber le comportement déjà implémenté. Notre travail reprendra les fonctionnalités implémentées en tenant compte de la dimensio, nous allons donc devoir mettre en place les points suivants :     
+Pour réaliser cet objectif, d'après notre rapide analyse, nous devons ajouter la *dimension* du vaisseau au code existant en vérifiant que ce nouveau paramètre ne vienne pas perturber le comportement déjà implémenté. Notre travail reprendra les stories implémentées en tenant compte de la dimension, nous allons donc devoir mettre en place les points suivants :     
 - [positionner un nouveau vanisseau avec une dimension donnée](#refactoPosition)   
 - [faire en sorte qu'il soit impossible de positionner un nouveau vaisseau qui déborde de l'espace de jeu](#refactoDebordement)    
 - [déplacer un vaisseau vers la droite en tenant compte de sa dimension](#refactoDimensionDeplacementDroite)     
@@ -637,7 +637,7 @@ Il est donc temps de répondre à la question : **Quel est donc le prochain test
 
 Maintenant que nous positionnons correctement un nouveau vaisseau avec une dimension, il est temps d'étudier le comportement du vaisseau vers la droite et vers la gauche en tenant compte de cette dimension.
 
-***Remarque : La fonctionnalité qui permet de positionner un vaisseau avec une dimension dans l'espace de jeu semble terminée et fonctionnelle. Avant de continuer, peut-être serait-il temps de commiter ce nouveau comportement (positionner un vaisseau avec une dimension) dans votre gestionnaire de version !***  
+***Remarque : La story qui permet de positionner un vaisseau avec une dimension dans l'espace de jeu semble terminée et fonctionnelle. Avant de continuer, peut-être serait-il temps de commiter ce nouveau comportement (positionner un vaisseau avec une dimension) dans votre gestionnaire de version !***  
 (sans oublier d'ajouter dans votre commit la nouvelle classe créée `DebordementEspaceJeuException`)
 
 ## Etape n°3 : Déplacer un vaisseau vers la droite en tenant compte de sa dimension <a id="refactoDimensionDeplacementDroite"></a>
@@ -915,7 +915,7 @@ Pour faciliter le lecture des méthodes de tests, renommez
 > ***N'oubliez pas de relancer les tests pour vérifier que le comportement de votre code n'a pas changé !***
 
 
-Il semblerait que nous ayons fait le tour, pour le moment, des fonctionnalités prévues dans le backlog de sprint. Ne pourrions-nous pas tout de même améliorer encore un peu la lisilité de la classe de test : `SpaceInvadersTest` ?
+Il semblerait que nous ayons fait le tour, pour le moment, des stories prévues dans le backlog . Ne pourrions-nous pas tout de même améliorer encore un peu la lisilité de la classe de test : `SpaceInvadersTest` ?
 
 ## Zoom sur le Refactoring de la classe de test `SpaceInvadersTest` (`Primitive Obsession`)<a id="refactoClasseTests"></a>
 
@@ -1367,7 +1367,7 @@ En tenant compte de cette nouvelle modification, la classe `Vaisseau` à la fin 
 
 
 
-***Remarque : Ce sprint est désormais terminé et la fonctionnalité *Dimensionner un vaisseau* est semble-t-elle terminée et fonctionnelle : il est temps de committer les derniers changements dans votre gestionnaire de version !***
+***Remarque : La fonctionnalité *Dimensionner un vaisseau* est semble-t-elle terminée et fonctionnelle : il est temps de committer les derniers changements dans votre gestionnaire de version !***
 Les derniers changements ont essentiellement portés sur le refactoring du code de test pour prendre en compte la dimension du vaisseau. Le message du commit pourrait donc refléter ces activités en ressemblant par exemple au message suivant `refactoring dimension et position du vaisseau`. (Sans oublier d'ajouter à l'index les nouvelles classes créés comme `Dimension` et `Position` :smile:)
 Remarque : Si vous le souhaitez, vous pouvez tagger ce dernier commit `S2` avec un message de tag du genre `code à la fin du sprint 2 (dimensionner un vaisseau)`.
  
@@ -1404,4 +1404,4 @@ Remarque : Si l'assocation entre les classes `Vaisseau` et `Dimension` et `Posit
  
 ... sinon pour continuez à implémenter les fonctionnalités en TDD et ...
 
-### Continuez par le [Sprint 3 : Choisir la vitesse du vaisseau](SpaceInvaders_S3_ChoisirVitesseVaisseau.md)
+### Continuez par la [fonctionnalité n°3 : Choisir la vitesse du vaisseau](SpaceInvaders_S3_ChoisirVitesseVaisseau.md)
