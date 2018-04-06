@@ -109,12 +109,12 @@ Les quatre premières fonctionnalités sont écrites sous la forme de tutoriel e
 
 Au fil des fonctionnalités, vous aurez de plus en plus d'autonomie pour développer votre mini-projet qui devra bien sûr respecter au mieux les bonnes pratiques de qualité de code ...
 
-Outre les fonctionnalités, deux autres tâches *techniques* vont être nécessaire pour mener à bien le premier objectif :
+Outre les fonctionnalités, d'autres tâches *techniques* vont être nécessaire pour mener à bien le premier objectif :
 
-- Sprint 0 (selon la terminologie agile) en tout début de projet va permettre :
- * [Installation du socle technique](enonces/SpaceInvaders_S0_SocleTechnique.md)
- * [Rapide Analyse du problème](enonces/SpaceInvaders_S0_QuickDesignSession.md)  
-- La [mise en place d'un moteur graphique au sein de notre jeu](enonces/SpaceInvaders_MoteurGraphique.md) sera consacrée à la prise en main d'un moteur graphique simplifié et à son intégration au jeu. Idéalement, cette tâche devrait être réalisée après la fonctionnalité 2 lorsque le vaisseau a une dimension. En réalité jusqu'à la livraison, le moteur graphique n'est pas vraiment nécessaire pour le développement de notre application puisque le comportement du jeu est vérifié et validé par les tests ! 
+- Le Sprint 0 (selon la terminologie agile) en tout début de projet va permettre :
+	- [Installation du socle technique](enonces/SpaceInvaders_S0_SocleTechnique.md)
+	- [Rapide Analyse du problème](enonces/SpaceInvaders_S0_QuickDesignSession.md)  
+- La [mise en place d'un moteur graphique au sein de notre jeu](enonces/SpaceInvaders_Spike_MoteurGraphique.md) sera consacrée à la prise en main d'un moteur graphique simplifié et à son intégration au jeu. Idéalement, cette tâche devrait être réalisée après la fonctionnalité 2 lorsque le vaisseau a une dimension. En réalité jusqu'à la livraison, le moteur graphique n'est pas vraiment nécessaire pour le développement de notre application puisque le comportement du jeu est vérifié et validé par les tests ! 
 
 Une fois l'objectif n°1 terminé (et avant de commencer l'objectif n°2), nous verrons également comment livrer ce projet via la : 
  
