@@ -281,7 +281,7 @@ Les tests sont au VERT !!! Tout va bien ...
 **Remarque : Les tests permettent de garantir le comportement du système. Avec les tests, on se sent plus en *confiance* avec son code et on a donc moins de réticence à le modifier et à jouer avec !**
 
 
-En-a-t-on réellement fini avec la classe `positionnerUnNouveauVaisseau` ?
+En-a-t-on réellement fini avec la méthode `positionnerUnNouveauVaisseau` ?
 
 La première instruction de la méthode `positionnerUnNouveauVaisseau` fait en sorte, à l'aide d'une exception, de ne pas permettre le positionnement du vaisseau dans l'espace de jeu si les coordonnées de la position souhaitée se situent en dehors des limites de l'espace de jeu...  
 Comme nous venons d'ajouter une dimension au vaisseau, il va falloir ajouter un autre cas de test qui visera à faire en sorte de ne pas pouvoir positionner un vaisseau qui dépasserait de l'espace de jeu en raison de ses dimensions.  
@@ -1274,7 +1274,7 @@ Après ce changement, l'IDE soulève encore des erreurs de compilation, ce qui e
 Pour ce refactoring, il n'y a donc aucune modification à apporte pour le moment dans la classe `Dimension` car les méthodes `longueur()` et `hauteur()` nous suffisent pour mettre en place le refactoring.
 
 
-Les méthodes qui effectuent une **lecture** de la dimension sont les méthodes : `abscisseLaPlusADroite`et  `ordonneeLaPlusHaute`.
+Les méthodes qui effectuent une **lecture** de la dimension sont les méthodes : `abscisseLaPlusADroite`et  `ordonneeLaPlusBasse`.
 
 Pour manipuler la `Dimension` dans ces méthodes, il suffit :  
 - de remplacer les `this.hauteur` par des `this.dimension.hauteur()` et   

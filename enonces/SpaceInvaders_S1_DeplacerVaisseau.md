@@ -1276,7 +1276,7 @@ Avez-vous besoin de refactorer quelque chose dans votre code ? (**Etape REFACTOR
 Mais **Quel est donc le prochain test  à écrire ?**  
 Facile, ce sera celui où le déplacement est impossible puisque le vaisseau se trouve sur la bordure gauche de l'espace de jeu.
 
-### Test : Déplacement *impossible* vers la droite du vaisseau dans l'espace jeu
+### Test : Déplacement *impossible* vers la gauche du vaisseau dans l'espace jeu
 
 Voici un test qui permet de vérifier que le vaisseau reste bien immobile s'il se trouve sur la bordure gauche de l'espace de jeu :
 

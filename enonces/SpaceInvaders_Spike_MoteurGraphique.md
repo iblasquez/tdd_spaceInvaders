@@ -47,7 +47,7 @@ Une fenêtre doit s'ouvrir avec une balle bleue au milieu !
 
 
 Cette balle peut se déplacer via votre interaction au clavier. Pour savoir comment, jetons un rapide coup d'oeil au code ...  
-Tout d'abord, rendez-vous dans la méthode `keyPressed` de la classe `keyPressed` pour découvrir quelle touche correspond à quel déplacement (*[magic number](https://sourcemaking.com/refactoring/replace-magic-number-with-symbolic-constant)* ? une constante aurait surement était plus pratique, vous tenterez d'y repenser si vous décidez de refactorer ce code un peu plus tard...).  
+Tout d'abord, rendez-vous dans la méthode `keyPressed` de la classe `Controleur` pour découvrir quelle touche correspond à quel déplacement (*[magic number](https://sourcemaking.com/refactoring/replace-magic-number-with-symbolic-constant)* ? une constante aurait surement était plus pratique, vous tenterez d'y repenser si vous décidez de refactorer ce code un peu plus tard...).  
 La méthode `evoluer` de la classe `MonJeu` vous renvoie vers la méthode `deplacer` de la classe `Personnage` (la balle) qui indique dans son code que seuls deux déplacements sont possible pour ce type de personnage. Quels sont-ils ? Testez-les avec les touches que vous avez identifiées précédemment.
 
 
@@ -97,7 +97,7 @@ Voici quelques conseils supplémentaires qui devraient vous permettre d'intégre
 Vous devez donc tout mettre en oeuvre pour que la classe `SpaceInvaders` implémente l'interface `Jeu` et qu'elle rédéfinisse correctement les méthodes `evoluer` et `etreFini` en tenant compte des besoins actuels de notre jeu Space Invaders (déplacement du vaisseau possible uniquement de droite à gauche et jeu infini). Il est intéressant de noter pour la suite, ce que nous indique la partie 1.3 de la documentation, c-a-d que c'est *la méthode `evoluer` qui encapsule les règles du jeu*.
  
 * Une **nouvelle classe `DessinSpaceInvaders`** doit ensuite être créée dans votre projet.  
-	* Cette classe a pour but *de dessiner l'image du jeu* : elle doit implémenter l'interface `Jeu` et donc redéfinir la méthode `void dessiner(BufferedImage image)` dont le seul objectif est, dans l'état actuel de votre Space Invaders, de dessiner un vaisseau rectangulaire (à l'aide de la méthode `fillRect` comme dans l'exemple de code) de couleur grise par exemple.  
+	* Cette classe a pour but *de dessiner l'image du jeu* : elle doit implémenter l'interface `DessinJeu` et donc redéfinir la méthode `void dessiner(BufferedImage image)` dont le seul objectif est, dans l'état actuel de votre Space Invaders, de dessiner un vaisseau rectangulaire (à l'aide de la méthode `fillRect` comme dans l'exemple de code) de couleur grise par exemple.  
 	***Remarques concernant l'affichage :***  
     -> L'affichage se fera directement en pixel, nous n'utiliserons pas de constante **`TAILLE_CASE`** !
 	-> une méthode `dessinerdessinerObjet` comme dans l'exemple est-elle vraiment nécessaire ?  
