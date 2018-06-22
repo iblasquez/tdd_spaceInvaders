@@ -324,7 +324,7 @@ Ainsi, la classe `SpaceInvaders` doit être sauvegardéé avant de relancer les 
 > **Vous venez de faire des modifications dans votre code...**  
 > ***N'oubliez pas de relancer les tests pour vérifier que le comportement de votre code n'a pas changé !***
 
-* Jetons un petit coup d'oeil sur les impacts du renommage d'`abscisse` en `abscisseLaPlusAGauche` dans la classe `SpaceInvaders`. En lançant une recherche sur `abscisseLaPlusAGauche` dans cette classe, on constate que cette méthode apparaît dans la méthode `deplacerVaisseauVersLaGauche` ce qui semble logique, mais aussi dans la méthode `deplacerVaisseauVersLaDroite`, ce qui l'ait beaucoup moins.   
+* Jetons un petit coup d'oeil sur les impacts du renommage d'`abscisse` en `abscisseLaPlusAGauche` dans la classe `SpaceInvaders`. En lançant une recherche sur `abscisseLaPlusAGauche` dans cette classe, on constate que cette méthode apparaît dans la méthode `deplacerVaisseauVersLaGauche` ce qui semble logique, mais aussi dans la méthode `deplacerVaisseauVersLaDroite`, ce qui l'est beaucoup moins.   
 Pourtant,cela s'explique très bien puisque jusqu'à présent, le vaisseau étant sans dimension, il n'y avait qu'une seule méthode `abscisse` qui ne différenciait pas la droite de la gauche.
 Le fait d'avoir *bien* (re)nommer la méthode, nous donne envie de remanier le code de la méthode `deplacerVaisseauVersLaDroite` pour faire appel dans cette méthode à `abscisseLaPlusADroite` au lieu de `abscisseLaPlusAGauche`. Les tests sont notre garde fou, alors allons-y, essayons voir si cette modification qui est censée mieux montrer l'intention du code a un impact sur nos tests. Modifiez donc la méthode `deplacerVaisseauVersLaDroite` en ce sens :
 
