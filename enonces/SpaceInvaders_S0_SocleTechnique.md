@@ -250,8 +250,9 @@ Remarques :
 
 Nous allons maintenant ajouter des **collaborateurs** à votre dépôt.    
 Pour cela, rendez-vous sur votre dépôt Github et cliquez sur **`Settings`**.  
-Choisissez **`Collaborators`** (Github va peut-être vous demander de resaisir votre mot de passe).  
-Dans le champ `Search by username, full name or email address`, tapez `iblasquez` puis cliquer sur `Add collaborator`. Vous venez de m'ajouter en tant que collaborateur de votre dépôt :smile: !
+Choisissez **`Manage access`** (Github va peut-être vous demander de resaisir votre mot de passe).  
+Cliquez sur le bouton **Invite a collaborator**.  
+Dans le champ `Search by username, full name or email address`, tapez `iblasquez` puis cliquer sur `Add ...`. Vous venez de m'ajouter en tant que collaborateur de votre dépôt :smile: !
   
 Ajoutez également, via son identifiant Github ou son adresse email, votre binôme ET votre enseignant de TP.
 
