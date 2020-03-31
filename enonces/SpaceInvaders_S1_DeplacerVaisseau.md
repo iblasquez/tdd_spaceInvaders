@@ -217,10 +217,8 @@ Nous considérons que pour cette première story le test écrit précédemment p
 Nous passons donc maintenant à la deuxième story de notre backlog à savoir : **positionner un nouveau vaisseau dans l'espace de jeu** et le prochain test à écrire sera donc en lien avec cette nouvelle story. 
 
 
-***Remarque : Votre story étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version*** :  
-- avec un message de commit qui reprend le but de la story, par exemple ***créer un espace de jeu***    
-- en prenant bien soin AVANT de cliquer sur le bouton **`Commit`** de cocher le `Status` des fichiers **`SpaceInvaders.java`** et **`SpaceInvadersTest.java`** (et uniquement ces deux fichiers) afin de les ajouter à l'**Index** et donc de les intégrer au commit !  
-Vérifiez une fois le commit effectué que ces deux fichiers sont bien précédés d'une icône en forme de **cylindre orange**, c-a-d qu'ils sont désormais bien soumis au contrôle du gestionnaire de version.  
+***Remarque : Votre story étant terminée et fonctionnelle, il est temps de committer ce nouveau changement dans votre gestionnaire de version*** avec un message de commit qui reprend le but de la story, par exemple ***créer un espace de jeu***    
+Si vous êtes sous Eclipse, vérifier une fois le commit effectué, que les deux fichiers `SpaceInvaders.java` et `SpaceInvadersTest.java` sont bien précédés d'une icône en forme de **cylindre orange**, c-a-d qu'ils sont désormais bien soumis au contrôle du gestionnaire de version.  
 
 ## Story n°2 : Positionner un nouveau vaisseau dans l'espace de jeu <a id="positionnerVaisseau"></a>
 

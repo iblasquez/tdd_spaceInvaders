@@ -159,7 +159,7 @@ Une fenêtre s'ouvre. Elle permet de configurer le commit :
 * Tout d'abord, en saisissant le **message** qui explicitera la teneur du commit. 
 Par exemple : `commit initial`.
 * Ensuite, en indiquant l'**auteur** des modifications et la personne qui les a commitées (**committer**) : avec Git, il n'y a pas de commit anonyme (indiquez votre adresse mail).
-* Et enfin, en choisissant le(s) fichier(s) à commiter parmi la liste des fichiers proposés (comme il s'agit du premier commit : nous choisirons le `pom.xml` que vous ferez passé de la cas ***Unstage Changed*** à la ***Staged Changes***.  
+* Et enfin, en choisissant le(s) fichier(s) à commiter parmi la liste des fichiers proposés (comme il s'agit du premier commit : nous choisirons le `pom.xml` que vous ferez passer de la case ***Unstage Changed*** à la case ***Staged Changes***.  
 
 Validez le commit en appuyant sur `Commit`.
 
