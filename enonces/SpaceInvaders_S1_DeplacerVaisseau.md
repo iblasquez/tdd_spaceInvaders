@@ -1398,7 +1398,7 @@ Vous pouvez aussi renseigner la partie **`Tag Message`** par exemple avec **`dé
 
 Précédemment, nous avons déjà évoqué le fait que **les tests font office de documentation de votre code...**
 
-Toutefois, dans le cadre du module M2104, vous devrez rédiger un petit rapport reprenant et documentant le travail réalisé pendant la séance de TP.  Ce rapport devra être réalisée pour la séance de TP suivante c-a-d qu'il devra être commité, poussé (avec un message explicite du genre mise à jour du rapport de la semaine x) et disponible sur votre dépôt distant (github, gitlab, gitunilim) au début de la séance de TP suivante.  
+Toutefois, dans le cadre du module M2104, vous devrez rédiger un petit rapport reprenant et documentant le travail réalisé pendant la séance de TP.  Ce rapport devra être réalisé pour la séance de TP suivante c-a-d qu'il devra être commité, poussé (avec un message explicite du genre mise à jour du rapport de la semaine x) et disponible sur votre dépôt distant (github, gitlab, gitunilim) au début de la séance de TP suivante.  
 Ce rapport se complétera de séance en séance.   
 
 #### En ce qui concerne la forme de ce rapport
@@ -1420,7 +1420,7 @@ Pour vous aider, un premier rapport est proposé [ici](rapport/README.md) avec l
 
 Dorénavant, vous allez donc rédiger votre rapport de manière itérative et incrémentale en ajoutant une fiche à chaque séance de TP.  
 Ainsi à la fin de chaque séance, vous devrez :  
-- lister les fonctionnalitées implémentées que vous aurez au préalable découpées en stories.   
+- lister les fonctionalités implémentées que vous aurez au préalable découpées en stories.   
 - lister les critères d'acceptance des stories.   
 - modéliser le diagramme de classes de votre application (en reverse-engineering à l'aide d'Object Aid UML par exemple)
 - générer un nuage de mot  
