@@ -1398,15 +1398,28 @@ Vous pouvez aussi renseigner la partie **`Tag Message`** par exemple avec **`dé
 
 Précédemment, nous avons déjà évoqué le fait que **les tests font office de documentation de votre code...**
 
-Toutefois, dans le cadre du module M2104, vous devrez fournir une fiche reprenant et documentant le travail réalisé pendant la séance de TP. Cette fiche (sorte de rapport de TP) devra être réalisée pour la séance de TP suivante. Elle fera partie d'un rapport écrit sous [Google Drive](https://www.google.com/intl/fr_ALL/drive/) qui devra respecter le modèle suivant disponible [ici](http://unil.im/210417). 
+Toutefois, dans le cadre du module M2104, vous devrez rédiger un petit rapport reprenant et documentant le travail réalisé pendant la séance de TP.  Ce rapport devra être réalisée pour la séance de TP suivante c-a-d qu'il devra être commité, poussé (avec un message explicite du genre mise à jour du rapport de la semaine x) et disponible sur votre dépôt distant (github, gitlab, gitunilim) au début de la séance de TP suivante.  
+Ce rapport se complétera de séance en séance.   
 
-<!--Créer un document sous [Google Drive](https://www.google.com/intl/fr_ALL/drive/) que nous nommerez `GXx_SpaceInvader_VosNoms` et inviter votre enseignant de TP à rejoindre ce document (comme cela, vous n'aurez dons pas besoin d'imprimer la fiche à chaque début séance).-->
+#### En ce qui concerne la forme de ce rapport
 
-Pour vous aider, la première fiche est déjà pré-remplie les stories que nous venons d'implémenter dans ce sprint.
+Ce rapport devra être directement écrit dans un fichier **`README` à la racine votre dépôt git**.  
+Un **répertoire `images` devra également être ajouté à la racine de votre git** pour stocker les images que vous ferez apparaître dans le rapport.  
+
+Le rapport devra être écrit au format [Markdown](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) ***ou*** au format [Asciidoc](https://docs.gitlab.com/ee/user/asciidoc.html) qui sont des langages de balisage léger.    
+- Un prototype de rapport en **[Markdown](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)** (avec un **README.md**) est consultable [ici](rapport/README.md).  
+- Un prototype de rapport en **[Asciidoc](https://docs.gitlab.com/ee/user/asciidoc.html)** (avec un **README.adoc**) est consultable [là](https://git.unilim.fr/M2104/rapport-spaceinvaders).
+
+
+<!--  modèle inial avec Google Drive http://unil.im/210417 -->
+
+
+#### En ce qui concerne le fond de ce rapport
+
+Pour vous aider, un premier rapport est proposé [ici](rapport/README.md) avec les stories que nous venons d'implémenter dans ce sprint.
 
 Dorénavant, vous allez donc rédiger votre rapport de manière itérative et incrémentale en ajoutant une fiche à chaque séance de TP.  
-Ainsi à la fin de chaque sséance, vous devrez :  
-- indiquer le(s) objectif(s) réalisé(s) pendant la séance  
+Ainsi à la fin de chaque séance, vous devrez :  
 - lister les fonctionnalitées implémentées que vous aurez au préalable découpées en stories.   
 - lister les critères d'acceptance des stories.   
 - modéliser le diagramme de classes de votre application (en reverse-engineering à l'aide d'Object Aid UML par exemple)
@@ -1414,10 +1427,9 @@ Ainsi à la fin de chaque sséance, vous devrez :
 - mentionner les difficultés que vous avez pu rencontrées au cours du TP (s'il y en a)
 - ajouter toutes remarques ou commentaires que vous jugerez utile
 - compléter le glossaire si nécessaire  
+ 
 
-Chaque séance de TP donnera lieu à la rédaction du fiche qui devra être remise à l'enseignant de TP avant le début de la séance suivante. Les modalités de remise de ces fiches sont indiquées dans le document Google Drive qui vous sert de modèle.  
-
-A la fin du module, vous devrez envoyer par mail à votre enseignant de TP : une version PDF de ce document. Durant la dernière séance de TP, vous devrez faire une démonstration de votre projet et montrer votre code à votre enseignant de TP. 
+Durant la dernière séance de TP, vous devrez faire une démonstration de votre projet et montrer votre code à votre enseignant de TP. 
 <!-- lui fournir un JAR de votre application --> 
 Nous jugerons bien sûr la qualité de votre code avant la quantité.
 
